@@ -1,0 +1,14 @@
+{
+  "name": "sassfile",
+  "version": "1.0.0",
+  "description": "this is for project",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "himanshu",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

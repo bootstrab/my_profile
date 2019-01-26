@@ -1,0 +1,780 @@
+﻿1
+00:00:00,030 --> 00:00:04,230
+<font color="#CCCCCC">alright guys so we're going to</font><font color="#E5E5E5"> deploy</font>
+
+2
+00:00:01,380 --> 00:00:06,779
+this website to github pages so github
+
+3
+00:00:04,230 --> 00:00:09,420
+pages allows you<font color="#CCCCCC"> to basically host any</font>
+
+4
+00:00:06,779 --> 00:00:11,820
+static site for free can also host react
+
+5
+00:00:09,420 --> 00:00:13,889
+client-side apps or angular client-side
+
+6
+00:00:11,820 --> 00:00:16,619
+apps just<font color="#E5E5E5"> anything</font><font color="#CCCCCC"> that is that doesn't</font>
+
+7
+00:00:13,889 --> 00:00:19,080
+<font color="#CCCCCC">have a back-end</font><font color="#E5E5E5"> or a server and it's</font>
+
+8
+00:00:16,619 --> 00:00:21,210
+free it gives you<font color="#CCCCCC"> HTTPS</font><font color="#E5E5E5"> it's it's just a</font>
+
+9
+00:00:19,080 --> 00:00:22,528
+really<font color="#E5E5E5"> cool service so in order to do</font>
+
+10
+00:00:21,210 --> 00:00:24,630
+this we have<font color="#E5E5E5"> to push</font><font color="#CCCCCC"> to a repository</font>
+
+11
+00:00:22,529 --> 00:00:28,198
+we're also going to install<font color="#CCCCCC"> a</font><font color="#E5E5E5"> package</font>
+
+12
+00:00:24,630 --> 00:00:32,308
+using<font color="#E5E5E5"> NPM called gh-pages which gives us</font>
+
+13
+00:00:28,199 --> 00:00:34,890
+kind of a terminal<font color="#E5E5E5"> CLI to deploy</font><font color="#CCCCCC"> our</font>
+
+14
+00:00:32,308 --> 00:00:37,199
+application<font color="#CCCCCC"> so first thing let's create</font>
+
+15
+00:00:34,890 --> 00:00:39,870
+a repository so in github just go to new
+
+16
+00:00:37,200 --> 00:00:42,930
+repository<font color="#CCCCCC"> I'm gonna call this</font><font color="#E5E5E5"> modern</font>
+
+17
+00:00:39,870 --> 00:00:45,949
+<font color="#CCCCCC">portfolio and will</font><font color="#E5E5E5"> say responsive</font>
+
+18
+00:00:42,930 --> 00:00:48,840
+portfolio<font color="#CCCCCC"> website let's create it and</font>
+
+19
+00:00:45,950 --> 00:00:50,760
+I've already<font color="#CCCCCC"> done the</font><font color="#E5E5E5"> init I've already</font>
+
+20
+00:00:48,840 --> 00:00:52,289
+added<font color="#E5E5E5"> my stuff and done my commits if</font>
+
+21
+00:00:50,760 --> 00:00:54,739
+you haven't done that<font color="#E5E5E5"> already</font>
+
+22
+00:00:52,289 --> 00:00:57,000
+then you want to<font color="#CCCCCC"> first initialize</font>
+
+23
+00:00:54,739 --> 00:00:59,849
+actually first of<font color="#E5E5E5"> all create a git</font>
+
+24
+00:00:57,000 --> 00:01:02,699
+ignore<font color="#E5E5E5"> a dot get ignore file and add</font>
+
+25
+00:00:59,850 --> 00:01:04,619
+node modules<font color="#CCCCCC"> ok once you do that</font><font color="#E5E5E5"> you can</font>
+
+26
+00:01:02,699 --> 00:01:07,590
+get an it<font color="#E5E5E5"> which will create a repository</font>
+
+27
+00:01:04,619 --> 00:01:11,189
+<font color="#CCCCCC">a local repository then you want</font><font color="#E5E5E5"> to get</font>
+
+28
+00:01:07,590 --> 00:01:16,710
+add all<font color="#CCCCCC"> ok add dot and then you want to</font>
+
+29
+00:01:11,189 --> 00:01:18,630
+<font color="#E5E5E5">get</font><font color="#CCCCCC"> about fit get commit dash em and</font>
+
+30
+00:01:16,710 --> 00:01:21,030
+then just<font color="#E5E5E5"> whatever you want say initial</font>
+
+31
+00:01:18,630 --> 00:01:22,830
+commit or something<font color="#E5E5E5"> like that once you</font>
+
+32
+00:01:21,030 --> 00:01:24,810
+do that<font color="#E5E5E5"> you have</font><font color="#CCCCCC"> it in your local</font>
+
+33
+00:01:22,830 --> 00:01:28,289
+repository<font color="#E5E5E5"> now what you want to do is</font>
+
+34
+00:01:24,810 --> 00:01:30,030
+add github as a remote so if we go<font color="#CCCCCC"> back</font>
+
+35
+00:01:28,290 --> 00:01:31,920
+to<font color="#CCCCCC"> that page here it gives us the</font>
+
+36
+00:01:30,030 --> 00:01:34,409
+command<font color="#E5E5E5"> to put in just get remote</font>
+
+37
+00:01:31,920 --> 00:01:37,320
+command<font color="#E5E5E5"> so let's grab that</font><font color="#CCCCCC"> let's go</font><font color="#E5E5E5"> back</font>
+
+38
+00:01:34,409 --> 00:01:39,270
+and<font color="#E5E5E5"> paste that in ok we shouldn't get</font>
+
+39
+00:01:37,320 --> 00:01:41,699
+<font color="#CCCCCC">any response it's just gonna</font><font color="#E5E5E5"> go to the</font>
+
+40
+00:01:39,270 --> 00:01:44,100
+<font color="#CCCCCC">next line</font><font color="#E5E5E5"> let's go back again</font><font color="#CCCCCC"> and let's</font>
+
+41
+00:01:41,700 --> 00:01:46,920
+push<font color="#E5E5E5"> so this is the basically the</font>
+
+42
+00:01:44,100 --> 00:01:50,280
+<font color="#E5E5E5">initial push to</font><font color="#CCCCCC"> the master branch</font><font color="#E5E5E5"> so</font>
+
+43
+00:01:46,920 --> 00:01:52,770
+let's go back<font color="#E5E5E5"> and paste that in and run</font>
+
+44
+00:01:50,280 --> 00:01:54,780
+it and it<font color="#E5E5E5"> should push</font><font color="#CCCCCC"> okay if you don't</font>
+
+45
+00:01:52,770 --> 00:01:56,640
+<font color="#CCCCCC">have your SSH keys</font><font color="#E5E5E5"> set up go ahead</font><font color="#CCCCCC"> and</font>
+
+46
+00:01:54,780 --> 00:01:59,460
+do<font color="#E5E5E5"> that</font><font color="#CCCCCC"> I have a video that</font><font color="#E5E5E5"> I did about</font>
+
+47
+00:01:56,640 --> 00:02:01,439
+two weeks<font color="#E5E5E5"> ago or so called SSH crash</font>
+
+48
+00:01:59,460 --> 00:02:03,390
+course and some<font color="#E5E5E5"> DevOps</font>
+
+49
+00:02:01,439 --> 00:02:06,869
+and in that video I show<font color="#CCCCCC"> you</font><font color="#E5E5E5"> how to</font>
+
+50
+00:02:03,390 --> 00:02:09,538
+create SSH keys as<font color="#E5E5E5"> well as add them to</font>
+
+51
+00:02:06,869 --> 00:02:12,540
+github<font color="#E5E5E5"> or you can just use</font><font color="#CCCCCC"> HTTP however</font>
+
+52
+00:02:09,538 --> 00:02:13,739
+you want to<font color="#E5E5E5"> get your repository up so if</font>
+
+53
+00:02:12,540 --> 00:02:17,160
+I reload this page
+
+54
+00:02:13,740 --> 00:02:19,500
+<font color="#E5E5E5">you now have</font><font color="#CCCCCC"> our repository we can</font>
+
+55
+00:02:17,160 --> 00:02:24,420
+dismiss this that's not<font color="#E5E5E5"> this is nothing</font>
+
+56
+00:02:19,500 --> 00:02:27,180
+<font color="#E5E5E5">so</font><font color="#CCCCCC"> let's say risk not tolerable whatever</font>
+
+57
+00:02:24,420 --> 00:02:30,059
+it doesn't<font color="#E5E5E5"> matter</font><font color="#CCCCCC"> so now our project is</font>
+
+58
+00:02:27,180 --> 00:02:33,060
+here now to deploy it we're going<font color="#CCCCCC"> to</font>
+
+59
+00:02:30,060 --> 00:02:40,220
+<font color="#E5E5E5">install something it's called gh-pages</font>
+
+60
+00:02:33,060 --> 00:02:44,790
+so let's say npm install righ - pages
+
+61
+00:02:40,220 --> 00:02:49,460
+and then we want<font color="#E5E5E5"> to go to our</font><font color="#CCCCCC"> package</font>
+
+62
+00:02:44,790 --> 00:02:51,540
+<font color="#CCCCCC">JSON file</font><font color="#E5E5E5"> and we want to add here</font>
+
+63
+00:02:49,460 --> 00:02:54,360
+anywhere<font color="#E5E5E5"> in here let's go right below</font>
+
+64
+00:02:51,540 --> 00:02:58,079
+<font color="#E5E5E5">main and let's add in home page and you</font>
+
+65
+00:02:54,360 --> 00:03:00,600
+<font color="#E5E5E5">want to put HTTP our HTTP actually and</font>
+
+66
+00:02:58,080 --> 00:03:01,470
+then your github<font color="#E5E5E5"> username so mine is</font>
+
+67
+00:03:00,600 --> 00:03:05,430
+Brad
+
+68
+00:03:01,470 --> 00:03:08,370
+Travis<font color="#CCCCCC"> II</font><font color="#E5E5E5"> it's not Thomas II can't spell</font>
+
+69
+00:03:05,430 --> 00:03:10,110
+<font color="#CCCCCC">my own name that's embarrassing</font><font color="#E5E5E5"> so dot</font>
+
+70
+00:03:08,370 --> 00:03:12,030
+github dot
+
+71
+00:03:10,110 --> 00:03:14,790
+<font color="#CCCCCC">slash and</font><font color="#E5E5E5"> then the name of</font><font color="#CCCCCC"> the</font>
+
+72
+00:03:12,030 --> 00:03:19,980
+<font color="#CCCCCC">repository and</font><font color="#E5E5E5"> in my</font><font color="#CCCCCC"> case I said modern</font>
+
+73
+00:03:14,790 --> 00:03:22,320
+underscore portfolio<font color="#CCCCCC"> okay so that's</font>
+
+74
+00:03:19,980 --> 00:03:25,109
+gonna be<font color="#E5E5E5"> my home page now we want to do</font>
+
+75
+00:03:22,320 --> 00:03:27,510
+is create a deploy script so just like
+
+76
+00:03:25,110 --> 00:03:34,200
+we<font color="#E5E5E5"> have this a script let's go ahead and</font>
+
+77
+00:03:27,510 --> 00:03:38,730
+put a comma<font color="#CCCCCC"> here and let's say deploy so</font>
+
+78
+00:03:34,200 --> 00:03:42,109
+for deploy we want to run<font color="#CCCCCC"> gah - pages</font>
+
+79
+00:03:38,730 --> 00:03:46,829
+actually<font color="#CCCCCC"> this needs to</font><font color="#E5E5E5"> be</font><font color="#CCCCCC"> in quotes so</font>
+
+80
+00:03:42,110 --> 00:03:50,010
+<font color="#CCCCCC">gah</font><font color="#E5E5E5"> - pages and then we want to add the</font>
+
+81
+00:03:46,830 --> 00:03:53,190
+D flag and then the directory so -<font color="#CCCCCC"> D and</font>
+
+82
+00:03:50,010 --> 00:03:55,260
+the directory that we want<font color="#CCCCCC"> to basically</font>
+
+83
+00:03:53,190 --> 00:03:57,800
+<font color="#E5E5E5">deploy</font><font color="#CCCCCC"> - that we want</font><font color="#E5E5E5"> to be our website</font>
+
+84
+00:03:55,260 --> 00:04:00,600
+is the<font color="#CCCCCC"> dist folder or the</font><font color="#E5E5E5"> dist directory</font>
+
+85
+00:03:57,800 --> 00:04:03,290
+<font color="#CCCCCC">okay so we want</font><font color="#E5E5E5"> to put that in there</font><font color="#CCCCCC"> so</font>
+
+86
+00:04:00,600 --> 00:04:08,090
+<font color="#E5E5E5">let's save this and</font><font color="#CCCCCC"> let's go down here</font>
+
+87
+00:04:03,290 --> 00:04:17,959
+<font color="#CCCCCC">clear this out and let's run NPM run</font>
+
+88
+00:04:08,090 --> 00:04:22,380
+deploy and hopefully this works<font color="#E5E5E5"> okay so</font>
+
+89
+00:04:17,959 --> 00:04:24,210
+we get published<font color="#E5E5E5"> but we should have got</font>
+
+90
+00:04:22,380 --> 00:04:26,760
+some<font color="#CCCCCC"> other stuff I believe let's just</font>
+
+91
+00:04:24,210 --> 00:04:30,750
+try it<font color="#E5E5E5"> out so we'll go HTTP</font>
+
+92
+00:04:26,760 --> 00:04:32,820
+ass<font color="#CCCCCC"> yeah let's say Brad traversée</font><font color="#E5E5E5"> can I</font>
+
+93
+00:04:30,750 --> 00:04:38,820
+spell my name right this time
+
+94
+00:04:32,820 --> 00:04:43,230
+Brad<font color="#E5E5E5"> Travis</font><font color="#CCCCCC"> e-dot github</font><font color="#E5E5E5"> dot modern</font>
+
+95
+00:04:38,820 --> 00:04:46,560
+underscore portfolio<font color="#CCCCCC"> and there we go so</font>
+
+96
+00:04:43,230 --> 00:04:49,050
+<font color="#CCCCCC">our application is now live and let's</font>
+
+97
+00:04:46,560 --> 00:04:55,100
+<font color="#E5E5E5">just test things out so we have our home</font>
+
+98
+00:04:49,050 --> 00:04:56,910
+page<font color="#CCCCCC"> we have our boat page</font><font color="#E5E5E5"> my work and</font>
+
+99
+00:04:55,100 --> 00:05:00,510
+how<font color="#E5E5E5"> to reach me</font>
+
+100
+00:04:56,910 --> 00:05:02,130
+cool<font color="#E5E5E5"> I'll test the responsiveness</font><font color="#CCCCCC"> l</font>
+
+101
+00:05:00,510 --> 00:05:04,500
+which should be no different just
+
+102
+00:05:02,130 --> 00:05:06,600
+<font color="#E5E5E5">because it's remote but</font><font color="#CCCCCC"> we'll just test</font>
+
+103
+00:05:04,500 --> 00:05:08,370
+it oh good everything is stacked<font color="#CCCCCC"> alright</font>
+
+104
+00:05:06,600 --> 00:05:10,920
+so we<font color="#E5E5E5"> have this now deployed to</font><font color="#CCCCCC"> the</font>
+
+105
+00:05:08,370 --> 00:05:13,680
+<font color="#CCCCCC">internet</font><font color="#E5E5E5"> now</font><font color="#CCCCCC"> if you don't</font><font color="#E5E5E5"> want to use</font>
+
+106
+00:05:10,920 --> 00:05:16,740
+this domain right here you can go<font color="#CCCCCC"> to</font>
+
+107
+00:05:13,680 --> 00:05:19,520
+your Prada repository and<font color="#CCCCCC"> you can go to</font>
+
+108
+00:05:16,740 --> 00:05:23,190
+settings and<font color="#CCCCCC"> go down</font><font color="#E5E5E5"> to where it says</font>
+
+109
+00:05:19,520 --> 00:05:24,960
+<font color="#E5E5E5">domain our custom domain and you can add</font>
+
+110
+00:05:23,190 --> 00:05:28,080
+in a domain now obviously<font color="#E5E5E5"> you have</font><font color="#CCCCCC"> to</font>
+
+111
+00:05:24,960 --> 00:05:32,820
+register<font color="#E5E5E5"> this domain so what I</font><font color="#CCCCCC"> suggest</font>
+
+112
+00:05:28,080 --> 00:05:35,099
+for registering domain is<font color="#CCCCCC"> Namecheap not</font>
+
+113
+00:05:32,820 --> 00:05:38,960
+<font color="#CCCCCC">named chap</font><font color="#E5E5E5"> Jesus I cannot spell today</font><font color="#CCCCCC"> so</font>
+
+114
+00:05:35,100 --> 00:05:41,910
+I bought<font color="#E5E5E5"> that</font><font color="#CCCCCC"> guy's so namecheap.com</font>
+
+115
+00:05:38,960 --> 00:05:45,150
+<font color="#E5E5E5">domains are very cheap</font><font color="#CCCCCC"> so this is where</font>
+
+116
+00:05:41,910 --> 00:05:49,340
+<font color="#E5E5E5">I register all my</font><font color="#CCCCCC"> domains</font><font color="#E5E5E5"> and if you</font>
+
+117
+00:05:45,150 --> 00:05:52,409
+follow the<font color="#CCCCCC"> instructions whereas it's</font>
+
+118
+00:05:49,340 --> 00:05:54,359
+right here learn more it's going to show
+
+119
+00:05:52,410 --> 00:05:57,090
+you how to<font color="#E5E5E5"> basically point your domain</font>
+
+120
+00:05:54,360 --> 00:06:00,090
+<font color="#CCCCCC">to github</font><font color="#E5E5E5"> and then you can use that as</font>
+
+121
+00:05:57,090 --> 00:06:01,289
+opposed to your github<font color="#CCCCCC"> io</font><font color="#E5E5E5"> whatever but</font>
+
+122
+00:06:00,090 --> 00:06:02,760
+I'm not going to<font color="#CCCCCC"> go through that I just</font>
+
+123
+00:06:01,290 --> 00:06:05,040
+<font color="#E5E5E5">wanted to get it on the Internet</font>
+
+124
+00:06:02,760 --> 00:06:08,400
+another thing you could do is use<font color="#E5E5E5"> manage</font>
+
+125
+00:06:05,040 --> 00:06:10,560
+hosting<font color="#E5E5E5"> I like</font><font color="#CCCCCC"> in-motion</font><font color="#E5E5E5"> hosting</font><font color="#CCCCCC"> com I</font>
+
+126
+00:06:08,400 --> 00:06:13,530
+actually have a video<font color="#E5E5E5"> if you search</font><font color="#CCCCCC"> for</font>
+
+127
+00:06:10,560 --> 00:06:16,200
+<font color="#E5E5E5">cPanel on YouTube it's like the fifth</font>
+
+128
+00:06:13,530 --> 00:06:18,539
+<font color="#E5E5E5">fourth or fifth video by traversing</font>
+
+129
+00:06:16,200 --> 00:06:20,700
+media<font color="#CCCCCC"> obviously</font><font color="#E5E5E5"> and we go through</font><font color="#CCCCCC"> we</font>
+
+130
+00:06:18,540 --> 00:06:24,930
+sign up<font color="#CCCCCC"> for an</font><font color="#E5E5E5"> account we hook up a</font>
+
+131
+00:06:20,700 --> 00:06:27,090
+website<font color="#E5E5E5"> we add email accounts we add FTP</font>
+
+132
+00:06:24,930 --> 00:06:29,340
+all that stuff and I'm<font color="#E5E5E5"> going</font><font color="#CCCCCC"> to put a</font>
+
+133
+00:06:27,090 --> 00:06:31,229
+link in<font color="#E5E5E5"> the</font><font color="#CCCCCC"> description for</font><font color="#E5E5E5"> in motion</font>
+
+134
+00:06:29,340 --> 00:06:33,929
+<font color="#E5E5E5">that actually has my affiliate so if you</font>
+
+135
+00:06:31,230 --> 00:06:35,730
+guys do decide<font color="#E5E5E5"> to</font><font color="#CCCCCC"> go</font><font color="#E5E5E5"> with in motion and</font>
+
+136
+00:06:33,930 --> 00:06:39,540
+use<font color="#E5E5E5"> that affiliate I'd appreciate</font><font color="#CCCCCC"> that</font>
+
+137
+00:06:35,730 --> 00:06:40,470
+but I have<font color="#CCCCCC"> actually have a</font><font color="#E5E5E5"> website with</font>
+
+138
+00:06:39,540 --> 00:06:43,680
+them a shared home
+
+139
+00:06:40,470 --> 00:06:45,960
+<font color="#E5E5E5">account under code demos</font><font color="#CCCCCC"> comm</font><font color="#E5E5E5"> as you can</font>
+
+140
+00:06:43,680 --> 00:06:50,550
+see there's<font color="#CCCCCC"> nothing here so if I wanted</font>
+
+141
+00:06:45,960 --> 00:06:54,539
+to<font color="#CCCCCC"> open up</font><font color="#E5E5E5"> an FTP client</font><font color="#CCCCCC"> like</font><font color="#E5E5E5"> filezilla</font>
+
+142
+00:06:50,550 --> 00:07:00,960
+<font color="#E5E5E5">and connect to it so my host would be</font>
+
+143
+00:06:54,540 --> 00:07:09,090
+code demos comm and my username<font color="#CCCCCC"> is code</font>
+
+144
+00:07:00,960 --> 00:07:11,460
+demos and password and connect and let's
+
+145
+00:07:09,090 --> 00:07:13,260
+go into the<font color="#E5E5E5"> public HTML</font><font color="#CCCCCC"> that's</font><font color="#E5E5E5"> our</font><font color="#CCCCCC"> web</font>
+
+146
+00:07:11,460 --> 00:07:15,840
+<font color="#CCCCCC">site</font><font color="#E5E5E5"> root and then all I would</font><font color="#CCCCCC"> have</font><font color="#E5E5E5"> to</font>
+
+147
+00:07:13,260 --> 00:07:18,360
+do is grab<font color="#CCCCCC"> my</font><font color="#E5E5E5"> files</font>
+
+148
+00:07:15,840 --> 00:07:25,469
+let me grab those real quick<font color="#E5E5E5"> so if we go</font>
+
+149
+00:07:18,360 --> 00:07:29,360
+to<font color="#CCCCCC"> let's see where is it I'm just trying</font>
+
+150
+00:07:25,470 --> 00:07:29,360
+<font color="#CCCCCC">to find</font><font color="#E5E5E5"> the project</font><font color="#CCCCCC"> that</font><font color="#E5E5E5"> we just created</font>
+
+151
+00:07:30,410 --> 00:07:35,730
+where the<font color="#CCCCCC"> hell</font><font color="#E5E5E5"> is it</font>
+
+152
+00:07:33,260 --> 00:07:37,820
+let me<font color="#E5E5E5"> just search for</font><font color="#CCCCCC"> it real quick</font><font color="#E5E5E5"> and</font>
+
+153
+00:07:35,730 --> 00:07:46,169
+you guys can't see<font color="#E5E5E5"> this it's off screen</font>
+
+154
+00:07:37,820 --> 00:07:46,530
+let's see Modern Portfolio<font color="#CCCCCC"> alright here</font>
+
+155
+00:07:46,169 --> 00:07:49,500
+it is
+
+156
+00:07:46,530 --> 00:07:51,150
+so<font color="#E5E5E5"> this is our project and again the</font>
+
+157
+00:07:49,500 --> 00:07:53,700
+dist folder is what you want to upload
+
+158
+00:07:51,150 --> 00:07:56,250
+<font color="#E5E5E5">so everything in the disk for let's just</font>
+
+159
+00:07:53,700 --> 00:08:00,380
+go ahead<font color="#E5E5E5"> and let's grab everything in</font>
+
+160
+00:07:56,250 --> 00:08:00,380
+here<font color="#E5E5E5"> and let's drag</font><font color="#CCCCCC"> it over</font><font color="#E5E5E5"> and</font>
+
+161
+00:08:02,150 --> 00:08:06,599
+<font color="#CCCCCC">shouldn't</font><font color="#E5E5E5"> take long at all</font><font color="#CCCCCC"> so you can</font>
+
+162
+00:08:05,040 --> 00:08:10,020
+see right here things that<font color="#E5E5E5"> are getting</font>
+
+163
+00:08:06,600 --> 00:08:11,520
+uploaded<font color="#E5E5E5"> and it should now be uploaded</font>
+
+164
+00:08:10,020 --> 00:08:13,620
+so I'm<font color="#E5E5E5"> gonna go back</font><font color="#CCCCCC"> over</font><font color="#E5E5E5"> here and</font>
+
+165
+00:08:11,520 --> 00:08:18,030
+reload and there we go<font color="#E5E5E5"> so</font><font color="#CCCCCC"> now we have</font>
+
+166
+00:08:13,620 --> 00:08:19,919
+code demos uploaded to in motion so<font color="#E5E5E5"> you</font>
+
+167
+00:08:18,030 --> 00:08:22,140
+have a lot of<font color="#E5E5E5"> a lot</font><font color="#CCCCCC"> of ways to deploy</font>
+
+168
+00:08:19,919 --> 00:08:24,659
+<font color="#E5E5E5">especially a static website</font><font color="#CCCCCC"> it's very</font>
+
+169
+00:08:22,140 --> 00:08:26,909
+very very simple<font color="#CCCCCC"> net Liffe is another</font>
+
+170
+00:08:24,660 --> 00:08:28,080
+good choice there's a lot of them out
+
+171
+00:08:26,910 --> 00:08:30,600
+<font color="#E5E5E5">there</font><font color="#CCCCCC"> and there's a</font><font color="#E5E5E5"> lot</font><font color="#CCCCCC"> of managed</font>
+
+172
+00:08:28,080 --> 00:08:33,210
+hosting like<font color="#CCCCCC"> hostgator but i like in</font>
+
+173
+00:08:30,600 --> 00:08:35,820
+motion it's cheap you<font color="#CCCCCC"> can see 6:39 for a</font>
+
+174
+00:08:33,210 --> 00:08:37,950
+business account<font color="#CCCCCC"> including</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> and you</font>
+
+175
+00:08:35,820 --> 00:08:39,740
+know an<font color="#E5E5E5"> email server stuff like that I</font>
+
+176
+00:08:37,950 --> 00:08:42,360
+believe they include a domain as<font color="#CCCCCC"> well</font>
+
+177
+00:08:39,740 --> 00:08:45,839
+looks like<font color="#E5E5E5"> they're</font><font color="#CCCCCC"> giving free SSL's now</font>
+
+178
+00:08:42,360 --> 00:08:47,850
+I<font color="#E5E5E5"> wasn't aware of that so unlimited disk</font>
+
+179
+00:08:45,839 --> 00:08:49,420
+space<font color="#CCCCCC"> and</font><font color="#E5E5E5"> so</font><font color="#CCCCCC"> on so I</font><font color="#E5E5E5"> will put a link if</font>
+
+180
+00:08:47,850 --> 00:08:51,399
+you if you're<font color="#CCCCCC"> interested in in motion</font>
+
+181
+00:08:49,420 --> 00:08:53,709
+and then again github pages is
+
+182
+00:08:51,399 --> 00:08:55,420
+completely free<font color="#E5E5E5"> but we do have two</font>
+
+183
+00:08:53,709 --> 00:08:57,939
+<font color="#E5E5E5">deployments now so you can see it's</font>
+
+184
+00:08:55,420 --> 00:08:59,920
+pretty<font color="#CCCCCC"> easy</font><font color="#E5E5E5"> and I</font><font color="#CCCCCC"> think that's gonna be</font>
+
+185
+00:08:57,940 --> 00:09:02,620
+<font color="#CCCCCC">it guys that's</font><font color="#E5E5E5"> it</font><font color="#CCCCCC"> for this this</font><font color="#E5E5E5"> little</font>
+
+186
+00:08:59,920 --> 00:09:04,240
+<font color="#E5E5E5">series I hope you liked it</font><font color="#CCCCCC"> I know some</font>
+
+187
+00:09:02,620 --> 00:09:05,680
+<font color="#E5E5E5">things may not have been clear</font>
+
+188
+00:09:04,240 --> 00:09:09,300
+especially<font color="#CCCCCC"> if you're just getting</font><font color="#E5E5E5"> into</font>
+
+189
+00:09:05,680 --> 00:09:11,709
+<font color="#CCCCCC">sass I know there</font><font color="#E5E5E5"> was a couple little</font>
+
+190
+00:09:09,300 --> 00:09:13,300
+times where I could<font color="#E5E5E5"> have explained</font>
+
+191
+00:09:11,709 --> 00:09:16,119
+<font color="#E5E5E5">things a little better and I apologize</font>
+
+192
+00:09:13,300 --> 00:09:18,040
+for<font color="#CCCCCC"> that it happens but hopefully</font>
+
+193
+00:09:16,120 --> 00:09:20,620
+overall you<font color="#CCCCCC"> like the series if you did</font>
+
+194
+00:09:18,040 --> 00:09:23,040
+please<font color="#E5E5E5"> leave it a like and thanks for</font>
+
+195
+00:09:20,620 --> 00:09:23,040
+<font color="#E5E5E5">watching</font><font color="#CCCCCC"> guys</font>
+

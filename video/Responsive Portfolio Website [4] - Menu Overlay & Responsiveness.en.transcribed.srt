@@ -1,0 +1,2636 @@
+﻿1
+00:00:00,030 --> 00:00:04,110
+<font color="#CCCCCC">alright guys in the last video we went</font>
+
+2
+00:00:01,979 --> 00:00:06,810
+<font color="#E5E5E5">ahead</font><font color="#CCCCCC"> and added</font><font color="#E5E5E5"> our JavaScript to add</font>
+
+3
+00:00:04,110 --> 00:00:09,090
+and remove our classes dynamically for
+
+4
+00:00:06,810 --> 00:00:11,570
+<font color="#E5E5E5">the menu we also created the cool</font><font color="#CCCCCC"> ex</font>
+
+5
+00:00:09,090 --> 00:00:13,799
+effect here when we click<font color="#E5E5E5"> our menu so</font>
+
+6
+00:00:11,570 --> 00:00:16,379
+<font color="#CCCCCC">now what I want</font><font color="#E5E5E5"> to do is work on</font><font color="#CCCCCC"> the</font>
+
+7
+00:00:13,799 --> 00:00:18,448
+overlay<font color="#CCCCCC"> okay and we</font><font color="#E5E5E5"> have our our nav</font>
+
+8
+00:00:16,379 --> 00:00:20,220
+links right here<font color="#E5E5E5"> and nav items but</font>
+
+9
+00:00:18,449 --> 00:00:23,460
+obviously<font color="#E5E5E5"> we don't want</font><font color="#CCCCCC"> these to show by</font>
+
+10
+00:00:20,220 --> 00:00:26,910
+default so<font color="#E5E5E5"> we have quite a bit</font><font color="#CCCCCC"> of CSS to</font>
+
+11
+00:00:23,460 --> 00:00:29,519
+<font color="#CCCCCC">write I should say</font><font color="#E5E5E5"> sass so let's go into</font>
+
+12
+00:00:26,910 --> 00:00:31,369
+our<font color="#E5E5E5"> menu dot s CSS I'm gonna close up</font>
+
+13
+00:00:29,519 --> 00:00:35,160
+some of this stuff we<font color="#E5E5E5"> don't need these</font>
+
+14
+00:00:31,369 --> 00:00:37,739
+and let's just make<font color="#E5E5E5"> this bigger</font><font color="#CCCCCC"> alright</font>
+
+15
+00:00:35,160 --> 00:00:39,779
+so let's go down<font color="#CCCCCC"> we'll go all the way</font>
+
+16
+00:00:37,739 --> 00:00:45,239
+<font color="#E5E5E5">down outside</font><font color="#CCCCCC"> of everything</font><font color="#E5E5E5"> and we want</font>
+
+17
+00:00:39,780 --> 00:00:50,070
+to create<font color="#E5E5E5"> our menu overlay and we're</font>
+
+18
+00:00:45,239 --> 00:00:55,800
+gonna grab<font color="#CCCCCC"> the class of menu and let's</font>
+
+19
+00:00:50,070 --> 00:01:00,809
+<font color="#CCCCCC">position it to be fixed oops</font><font color="#E5E5E5"> position to</font>
+
+20
+00:00:55,800 --> 00:01:03,690
+be fixed and we'll say from the top we
+
+21
+00:01:00,809 --> 00:01:09,030
+<font color="#E5E5E5">want</font><font color="#CCCCCC"> 0 and then we want the width of it</font>
+
+22
+00:01:03,690 --> 00:01:10,770
+to be<font color="#CCCCCC"> 100% and the opacity</font><font color="#E5E5E5"> and you don't</font>
+
+23
+00:01:09,030 --> 00:01:12,299
+have<font color="#E5E5E5"> to add opacity if you don't want it</font>
+
+24
+00:01:10,770 --> 00:01:15,479
+to be see-through I like the see-through
+
+25
+00:01:12,299 --> 00:01:17,520
+effect and what I mean<font color="#E5E5E5"> is if we go here</font>
+
+26
+00:01:15,479 --> 00:01:19,619
+you<font color="#CCCCCC"> can kind of see that see</font><font color="#E5E5E5"> the page</font>
+
+27
+00:01:17,520 --> 00:01:21,869
+<font color="#CCCCCC">behind it you</font><font color="#E5E5E5"> know if you don't want to</font>
+
+28
+00:01:19,619 --> 00:01:23,909
+add opacity then don't add<font color="#E5E5E5"> this if you</font>
+
+29
+00:01:21,869 --> 00:01:25,860
+want it<font color="#E5E5E5"> to be</font><font color="#CCCCCC"> just you know</font><font color="#E5E5E5"> gray without</font>
+
+30
+00:01:23,909 --> 00:01:27,420
+the<font color="#CCCCCC"> background</font><font color="#E5E5E5"> but I like the effect</font><font color="#CCCCCC"> of</font>
+
+31
+00:01:25,860 --> 00:01:33,060
+seeing behind<font color="#E5E5E5"> it so we're gonna set</font><font color="#CCCCCC"> that</font>
+
+32
+00:01:27,420 --> 00:01:35,460
+<font color="#CCCCCC">to 0.9 and we want this</font><font color="#E5E5E5"> to by default we</font>
+
+33
+00:01:33,060 --> 00:01:37,290
+want the visibility to be<font color="#E5E5E5"> hidden</font><font color="#CCCCCC"> right</font>
+
+34
+00:01:35,460 --> 00:01:39,720
+<font color="#E5E5E5">because we don't want the links and or</font>
+
+35
+00:01:37,290 --> 00:01:45,479
+anything<font color="#E5E5E5"> to show by default so let's say</font>
+
+36
+00:01:39,720 --> 00:01:49,439
+visibility and set that<font color="#CCCCCC"> to hidden so if</font>
+
+37
+00:01:45,479 --> 00:01:55,049
+I save now<font color="#E5E5E5"> we can no longer see it okay</font>
+
+38
+00:01:49,439 --> 00:01:57,298
+now when we hit the button then we want
+
+39
+00:01:55,049 --> 00:02:00,079
+remember<font color="#CCCCCC"> the show class is going to be</font>
+
+40
+00:01:57,299 --> 00:02:02,790
+applied<font color="#CCCCCC"> so we want</font><font color="#E5E5E5"> to add for the show</font>
+
+41
+00:02:00,079 --> 00:02:06,809
+<font color="#CCCCCC">attached</font><font color="#E5E5E5"> to the menu so ampersand</font>
+
+42
+00:02:02,790 --> 00:02:11,190
+<font color="#E5E5E5">thought show then we want to set the</font>
+
+43
+00:02:06,810 --> 00:02:13,920
+visibility<font color="#E5E5E5"> to visible so let's save</font><font color="#CCCCCC"> that</font>
+
+44
+00:02:11,190 --> 00:02:15,900
+<font color="#E5E5E5">and</font><font color="#CCCCCC"> now if I click</font><font color="#E5E5E5"> this now</font><font color="#CCCCCC"> it's visit</font>
+
+45
+00:02:13,920 --> 00:02:19,859
+<font color="#E5E5E5">bull okay if I click it again it</font><font color="#CCCCCC"> goes</font>
+
+46
+00:02:15,900 --> 00:02:22,850
+away so let's take<font color="#CCCCCC"> care of like</font><font color="#E5E5E5"> the</font>
+
+47
+00:02:19,860 --> 00:02:26,940
+branding<font color="#E5E5E5"> and the nav and stuff like that</font>
+
+48
+00:02:22,850 --> 00:02:30,540
+now since the<font color="#E5E5E5"> the class name is menu</font>
+
+49
+00:02:26,940 --> 00:02:32,340
+branding what we could do is<font color="#E5E5E5"> instead of</font>
+
+50
+00:02:30,540 --> 00:02:33,000
+and we're gonna go<font color="#E5E5E5"> inside here we're</font>
+
+51
+00:02:32,340 --> 00:02:37,050
+gonna nest
+
+52
+00:02:33,000 --> 00:02:40,140
+instead of<font color="#E5E5E5"> doing dot menu - branding we</font>
+
+53
+00:02:37,050 --> 00:02:43,739
+could actually say<font color="#E5E5E5"> ampersand and then</font>
+
+54
+00:02:40,140 --> 00:02:47,000
+just add - branding<font color="#CCCCCC"> whoops that</font>
+
+55
+00:02:43,739 --> 00:02:50,130
+shouldn't<font color="#CCCCCC"> be a</font><font color="#E5E5E5"> zero</font><font color="#CCCCCC"> should be a -</font>
+
+56
+00:02:47,000 --> 00:02:52,800
+branding so that's going<font color="#CCCCCC"> to represent</font>
+
+57
+00:02:50,130 --> 00:02:55,140
+this whatever this is<font color="#E5E5E5"> and then it's</font>
+
+58
+00:02:52,800 --> 00:02:57,420
+<font color="#E5E5E5">gonna add on to</font><font color="#CCCCCC"> it - branding</font><font color="#E5E5E5"> so we</font>
+
+59
+00:02:55,140 --> 00:03:00,238
+don't<font color="#CCCCCC"> even</font><font color="#E5E5E5"> have to do like class menu</font>
+
+60
+00:02:57,420 --> 00:03:01,950
+branding<font color="#E5E5E5"> just a neat little trick</font><font color="#CCCCCC"> now I</font>
+
+61
+00:03:00,239 --> 00:03:04,380
+also want<font color="#E5E5E5"> this styling to go for the</font>
+
+62
+00:03:01,950 --> 00:03:06,720
+menu<font color="#E5E5E5"> nav</font><font color="#CCCCCC"> okay so we have a class of menu</font>
+
+63
+00:03:04,380 --> 00:03:11,160
+- nav so I'm gonna put a comma here<font color="#CCCCCC"> and</font>
+
+64
+00:03:06,720 --> 00:03:13,670
+we're<font color="#E5E5E5"> gonna say ampersand - nav</font><font color="#CCCCCC"> alright</font>
+
+65
+00:03:11,160 --> 00:03:18,530
+so that'll be menu branding and menu nav
+
+66
+00:03:13,670 --> 00:03:21,380
+so we want this<font color="#CCCCCC"> to be displayed as</font><font color="#E5E5E5"> flex</font>
+
+67
+00:03:18,530 --> 00:03:26,160
+<font color="#E5E5E5">okay so we want</font><font color="#CCCCCC"> to display flex and</font>
+
+68
+00:03:21,380 --> 00:03:32,820
+let's do let's make<font color="#CCCCCC"> it into a column</font><font color="#E5E5E5"> so</font>
+
+69
+00:03:26,160 --> 00:03:36,720
+if we say<font color="#CCCCCC"> flex -</font><font color="#E5E5E5"> flow we want to set</font><font color="#CCCCCC"> it</font>
+
+70
+00:03:32,820 --> 00:03:39,600
+to<font color="#E5E5E5"> a column which means going up and</font>
+
+71
+00:03:36,720 --> 00:03:43,200
+<font color="#E5E5E5">down as opposed to right and</font><font color="#CCCCCC"> left</font><font color="#E5E5E5"> and we</font>
+
+72
+00:03:39,600 --> 00:03:45,329
+also want<font color="#E5E5E5"> it</font><font color="#CCCCCC"> to wrap okay so we'll save</font>
+
+73
+00:03:43,200 --> 00:03:47,790
+that<font color="#E5E5E5"> and</font><font color="#CCCCCC"> if we click this we're not</font>
+
+74
+00:03:45,329 --> 00:03:50,720
+<font color="#E5E5E5">going to see any</font><font color="#CCCCCC"> difference yet but we</font>
+
+75
+00:03:47,790 --> 00:03:57,510
+want to align the items to this<font color="#CCCCCC"> Center</font>
+
+76
+00:03:50,720 --> 00:04:00,000
+<font color="#E5E5E5">so let's say</font><font color="#CCCCCC"> aligned items to</font><font color="#E5E5E5"> Center</font><font color="#CCCCCC"> we</font>
+
+77
+00:03:57,510 --> 00:04:02,700
+also wanted to<font color="#E5E5E5"> we want to justify the</font>
+
+78
+00:04:00,000 --> 00:04:03,989
+content to<font color="#E5E5E5"> the center as well so we want</font>
+
+79
+00:04:02,700 --> 00:04:09,268
+to align both vertically<font color="#CCCCCC"> and</font>
+
+80
+00:04:03,989 --> 00:04:14,100
+horizontally<font color="#E5E5E5"> to the center and then we</font>
+
+81
+00:04:09,269 --> 00:04:16,380
+want both to float left<font color="#E5E5E5"> and let's set</font>
+
+82
+00:04:14,100 --> 00:04:19,858
+the<font color="#E5E5E5"> width to 50% because we want each</font>
+
+83
+00:04:16,380 --> 00:04:22,380
+each side to take up<font color="#CCCCCC"> 50%</font><font color="#E5E5E5"> of the width</font>
+
+84
+00:04:19,858 --> 00:04:23,880
+<font color="#CCCCCC">and for the height we want</font><font color="#E5E5E5"> the height to</font>
+
+85
+00:04:22,380 --> 00:04:27,300
+be<font color="#E5E5E5"> the whole</font><font color="#CCCCCC"> thing so we're</font><font color="#E5E5E5"> going to use</font>
+
+86
+00:04:23,880 --> 00:04:29,159
+a hundred<font color="#E5E5E5"> VH okay so viewport Heights</font>
+
+87
+00:04:27,300 --> 00:04:30,780
+<font color="#CCCCCC">where they said like a hundred slices so</font>
+
+88
+00:04:29,159 --> 00:04:32,550
+it's gonna take<font color="#E5E5E5"> up the whole</font><font color="#CCCCCC"> thing and</font>
+
+89
+00:04:30,780 --> 00:04:34,830
+what we're<font color="#E5E5E5"> talking about is both of</font>
+
+90
+00:04:32,550 --> 00:04:37,830
+these sides<font color="#E5E5E5"> this styling has has to do</font>
+
+91
+00:04:34,830 --> 00:04:40,409
+<font color="#E5E5E5">with both of these so flex is</font><font color="#CCCCCC"> gonna</font><font color="#E5E5E5"> make</font>
+
+92
+00:04:37,830 --> 00:04:42,300
+<font color="#E5E5E5">it into</font><font color="#CCCCCC"> a column so</font><font color="#E5E5E5"> that's gonna make</font>
+
+93
+00:04:40,409 --> 00:04:46,860
+like these links go<font color="#E5E5E5"> this way instead of</font>
+
+94
+00:04:42,300 --> 00:04:49,590
+<font color="#E5E5E5">this way</font><font color="#CCCCCC"> align items will Center it will</font>
+
+95
+00:04:46,860 --> 00:04:52,020
+Center<font color="#E5E5E5"> it this way and then justify that</font>
+
+96
+00:04:49,590 --> 00:04:54,628
+way so that it's in the center we're
+
+97
+00:04:52,020 --> 00:04:56,609
+folding both to the<font color="#CCCCCC"> left with this 50%</font>
+
+98
+00:04:54,629 --> 00:04:58,020
+so we want to split<font color="#E5E5E5"> it in half and both</font>
+
+99
+00:04:56,610 --> 00:05:00,599
+of them have the height of a hundred
+
+100
+00:04:58,020 --> 00:05:02,400
+viewport<font color="#CCCCCC"> Heights we also want to put</font><font color="#E5E5E5"> an</font>
+
+101
+00:05:00,599 --> 00:05:04,440
+overflow hidden<font color="#E5E5E5"> because we never want</font><font color="#CCCCCC"> to</font>
+
+102
+00:05:02,400 --> 00:05:09,840
+have<font color="#CCCCCC"> any scroll bars so let's say</font>
+
+103
+00:05:04,440 --> 00:05:11,639
+overflow<font color="#E5E5E5"> and set that</font><font color="#CCCCCC"> to hidden</font><font color="#E5E5E5"> all</font>
+
+104
+00:05:09,840 --> 00:05:13,710
+right<font color="#E5E5E5"> so now let's</font><font color="#CCCCCC"> go back to our</font>
+
+105
+00:05:11,639 --> 00:05:16,020
+<font color="#E5E5E5">project</font><font color="#CCCCCC"> and try it out so if we</font><font color="#E5E5E5"> click</font>
+
+106
+00:05:13,710 --> 00:05:19,020
+this you see the nav is<font color="#E5E5E5"> now down here</font>
+
+107
+00:05:16,020 --> 00:05:21,270
+<font color="#E5E5E5">it's in the middle of its 50% side and</font>
+
+108
+00:05:19,020 --> 00:05:23,729
+there's no portrait there's no image
+
+109
+00:05:21,270 --> 00:05:25,560
+because we<font color="#CCCCCC"> haven't added</font><font color="#E5E5E5"> that yet but it</font>
+
+110
+00:05:23,729 --> 00:05:28,139
+will<font color="#CCCCCC"> we will have that we'll also</font><font color="#E5E5E5"> have</font>
+
+111
+00:05:25,560 --> 00:05:29,909
+<font color="#CCCCCC">the background for each side this</font><font color="#E5E5E5"> is</font>
+
+112
+00:05:28,139 --> 00:05:32,159
+just the styling<font color="#CCCCCC"> that I wanted</font><font color="#E5E5E5"> to apply</font>
+
+113
+00:05:29,909 --> 00:05:34,199
+<font color="#E5E5E5">to both the branding side and the nav</font>
+
+114
+00:05:32,159 --> 00:05:38,310
+side so now we need<font color="#E5E5E5"> to do each separate</font>
+
+115
+00:05:34,199 --> 00:05:40,740
+one so within the menu<font color="#CCCCCC"> okay but outside</font>
+
+116
+00:05:38,310 --> 00:05:44,130
+<font color="#CCCCCC">of</font><font color="#E5E5E5"> this here we want to do</font>
+
+117
+00:05:40,740 --> 00:05:46,590
+ampersand - nav<font color="#E5E5E5"> okay so just the nav</font>
+
+118
+00:05:44,130 --> 00:05:48,449
+side<font color="#E5E5E5"> and we're going</font><font color="#CCCCCC"> to just margin</font>
+
+119
+00:05:46,590 --> 00:05:54,388
+we're going to zero out<font color="#E5E5E5"> the margin and</font>
+
+120
+00:05:48,449 --> 00:05:56,849
+padding and let's add a background<font color="#E5E5E5"> now</font>
+
+121
+00:05:54,389 --> 00:05:58,199
+the background<font color="#E5E5E5"> I want it to be</font><font color="#CCCCCC"> I want</font><font color="#E5E5E5"> it</font>
+
+122
+00:05:56,849 --> 00:05:59,639
+to be the<font color="#E5E5E5"> primary color but I want to</font>
+
+123
+00:05:58,199 --> 00:06:03,270
+darken<font color="#CCCCCC"> it a little bit so I'm gonna use</font>
+
+124
+00:05:59,639 --> 00:06:10,560
+darken just part of sass and<font color="#CCCCCC"> we want to</font>
+
+125
+00:06:03,270 --> 00:06:13,500
+say primary - color and let's set<font color="#CCCCCC"> 5 okay</font>
+
+126
+00:06:10,560 --> 00:06:15,990
+<font color="#E5E5E5">so if we save that and we click and</font><font color="#CCCCCC"> now</font>
+
+127
+00:06:13,500 --> 00:06:20,580
+you can see we have the dark<font color="#CCCCCC"> gray</font><font color="#E5E5E5"> and</font>
+
+128
+00:06:15,990 --> 00:06:24,990
+since we set the opacity of the<font color="#E5E5E5"> menu to</font>
+
+129
+00:06:20,580 --> 00:06:27,060
+0.9 we can see through it<font color="#CCCCCC"> okay so the</font>
+
+130
+00:06:24,990 --> 00:06:29,580
+<font color="#E5E5E5">next thing I want to do is get rid of</font>
+
+131
+00:06:27,060 --> 00:06:33,479
+the<font color="#E5E5E5"> list the icons I'm sorry not the</font>
+
+132
+00:06:29,580 --> 00:06:37,190
+icons the bullet points here<font color="#CCCCCC"> so it's an</font>
+
+133
+00:06:33,479 --> 00:06:41,330
+list - style
+
+134
+00:06:37,190 --> 00:06:44,330
+style<font color="#E5E5E5"> and we'll set</font><font color="#CCCCCC"> that</font><font color="#E5E5E5"> to none okay I</font>
+
+135
+00:06:41,330 --> 00:06:46,609
+get rid of those<font color="#E5E5E5"> now notice how when</font>
+
+136
+00:06:44,330 --> 00:06:48,560
+this shows up when we click this it<font color="#CCCCCC"> just</font>
+
+137
+00:06:46,610 --> 00:06:50,630
+pops in and I don't<font color="#E5E5E5"> want that I</font><font color="#CCCCCC"> want</font><font color="#E5E5E5"> it</font>
+
+138
+00:06:48,560 --> 00:06:53,000
+<font color="#CCCCCC">to slide in from the top</font><font color="#E5E5E5"> so we're</font><font color="#CCCCCC"> gonna</font>
+
+139
+00:06:50,630 --> 00:06:55,820
+<font color="#CCCCCC">use something called</font><font color="#E5E5E5"> translate 3d which</font>
+
+140
+00:06:53,000 --> 00:06:57,980
+is a value for transform<font color="#E5E5E5"> for the</font>
+
+141
+00:06:55,820 --> 00:07:00,700
+transform property<font color="#E5E5E5"> so as you can</font><font color="#CCCCCC"> see</font>
+
+142
+00:06:57,980 --> 00:07:05,060
+here if transform translate 3d takes in
+
+143
+00:07:00,700 --> 00:07:06,469
+positioning attributes or parameters and
+
+144
+00:07:05,060 --> 00:07:08,150
+<font color="#CCCCCC">you can see each one</font><font color="#E5E5E5"> of these it</font><font color="#CCCCCC"> just</font>
+
+145
+00:07:06,470 --> 00:07:14,150
+kind<font color="#CCCCCC"> of moves it around</font><font color="#E5E5E5"> because of these</font>
+
+146
+00:07:08,150 --> 00:07:17,780
+values<font color="#E5E5E5"> that's the zero position so what</font>
+
+147
+00:07:14,150 --> 00:07:21,590
+I want<font color="#E5E5E5"> to do is on the nav I want it to</font>
+
+148
+00:07:17,780 --> 00:07:24,380
+<font color="#E5E5E5">not show until the show class is applied</font>
+
+149
+00:07:21,590 --> 00:07:26,989
+and then<font color="#E5E5E5"> we want to basically change the</font>
+
+150
+00:07:24,380 --> 00:07:27,980
+translate 3d parameters<font color="#E5E5E5"> so let me show</font>
+
+151
+00:07:26,990 --> 00:07:31,790
+<font color="#E5E5E5">you what I mean we're gonna say</font>
+
+152
+00:07:27,980 --> 00:07:35,630
+transform and then say translate
+
+153
+00:07:31,790 --> 00:07:39,650
+<font color="#CCCCCC">actually translate 3d</font><font color="#E5E5E5"> we want and we're</font>
+
+154
+00:07:35,630 --> 00:07:41,780
+gonna start off at<font color="#CCCCCC"> zero 100% zero</font><font color="#E5E5E5"> and</font>
+
+155
+00:07:39,650 --> 00:07:43,849
+that's<font color="#E5E5E5"> going to just kind of take it off</font>
+
+156
+00:07:41,780 --> 00:07:46,669
+the page it's<font color="#CCCCCC"> gonna</font><font color="#E5E5E5"> put it it's going to</font>
+
+157
+00:07:43,850 --> 00:07:49,640
+<font color="#E5E5E5">put it up here</font><font color="#CCCCCC"> and</font><font color="#E5E5E5"> then</font><font color="#CCCCCC"> we</font><font color="#E5E5E5"> want it to</font>
+
+158
+00:07:46,670 --> 00:07:52,400
+transition<font color="#E5E5E5"> down so we're gonna</font><font color="#CCCCCC"> also</font>
+
+159
+00:07:49,640 --> 00:07:56,750
+include our mixin of<font color="#CCCCCC"> ease out so let's</font>
+
+160
+00:07:52,400 --> 00:08:02,359
+say include ease out now when the show
+
+161
+00:07:56,750 --> 00:08:03,500
+show class is applied to the nav so we
+
+162
+00:08:02,360 --> 00:08:07,940
+want to go<font color="#E5E5E5"> down</font><font color="#CCCCCC"> here we want to say</font>
+
+163
+00:08:03,500 --> 00:08:10,640
+amperes amp and then dot show<font color="#E5E5E5"> so when</font>
+
+164
+00:08:07,940 --> 00:08:13,760
+that's applied we want it to slide in
+
+165
+00:08:10,640 --> 00:08:18,490
+from top<font color="#CCCCCC"> and we can do that by</font><font color="#E5E5E5"> changing</font>
+
+166
+00:08:13,760 --> 00:08:23,090
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> translate3d</font><font color="#E5E5E5"> parameters so translate</font>
+
+167
+00:08:18,490 --> 00:08:26,180
+<font color="#CCCCCC">i'm not</font><font color="#E5E5E5"> translate transform and then</font>
+
+168
+00:08:23,090 --> 00:08:30,979
+translate 3d<font color="#E5E5E5"> and we want to take the</font>
+
+169
+00:08:26,180 --> 00:08:34,969
+values now and<font color="#E5E5E5"> just zero them all out so</font>
+
+170
+00:08:30,980 --> 00:08:37,849
+now if<font color="#E5E5E5"> I</font><font color="#CCCCCC"> click this actually I want that</font>
+
+171
+00:08:34,969 --> 00:08:39,830
+to come<font color="#CCCCCC"> in from</font><font color="#E5E5E5"> the top since I want it</font>
+
+172
+00:08:37,849 --> 00:08:41,660
+to come in from<font color="#E5E5E5"> the</font><font color="#CCCCCC"> top</font><font color="#E5E5E5"> we need to set</font>
+
+173
+00:08:39,830 --> 00:08:43,910
+this to negative 100
+
+174
+00:08:41,659 --> 00:08:46,219
+because what 100%<font color="#E5E5E5"> is doing is its</font>
+
+175
+00:08:43,909 --> 00:08:49,480
+pushing it down<font color="#CCCCCC"> it's pushing it down if</font>
+
+176
+00:08:46,220 --> 00:08:52,779
+we do negative<font color="#CCCCCC"> 100% it</font><font color="#E5E5E5"> should be up</font>
+
+177
+00:08:49,480 --> 00:08:55,000
+so it's<font color="#CCCCCC"> do- 100 and now</font><font color="#E5E5E5"> it comes in from</font>
+
+178
+00:08:52,779 --> 00:08:56,709
+the<font color="#CCCCCC"> top</font><font color="#E5E5E5"> the other side we want to come</font>
+
+179
+00:08:55,000 --> 00:08:59,290
+in from<font color="#CCCCCC"> the</font><font color="#E5E5E5"> bottom so we'll do a hundred</font>
+
+180
+00:08:56,709 --> 00:09:00,268
+percent<font color="#E5E5E5"> there but yeah that's that's</font>
+
+181
+00:08:59,290 --> 00:09:03,760
+good
+
+182
+00:09:00,269 --> 00:09:05,920
+now before<font color="#E5E5E5"> I work on like how these</font>
+
+183
+00:09:03,760 --> 00:09:07,389
+links look and stuff like<font color="#E5E5E5"> that and how</font>
+
+184
+00:09:05,920 --> 00:09:10,139
+they fly in from the side I want<font color="#CCCCCC"> to</font>
+
+185
+00:09:07,389 --> 00:09:12,610
+handle the branding side so let's go
+
+186
+00:09:10,139 --> 00:09:14,529
+still within the<font color="#E5E5E5"> menu you still want to</font>
+
+187
+00:09:12,610 --> 00:09:17,380
+be within the<font color="#E5E5E5"> menu but you want to go</font>
+
+188
+00:09:14,529 --> 00:09:24,189
+outside of<font color="#CCCCCC"> the nav here so to be right</font>
+
+189
+00:09:17,380 --> 00:09:28,120
+here and let's say branding side so
+
+190
+00:09:24,190 --> 00:09:32,589
+we'll<font color="#E5E5E5"> do an</font><font color="#CCCCCC"> % - branding to target the</font>
+
+191
+00:09:28,120 --> 00:09:35,680
+menu - branding class<font color="#E5E5E5"> and let's set the</font>
+
+192
+00:09:32,589 --> 00:09:38,079
+<font color="#CCCCCC">background</font><font color="#E5E5E5"> so this background I just</font>
+
+193
+00:09:35,680 --> 00:09:40,060
+<font color="#CCCCCC">want set to the primary color</font><font color="#E5E5E5"> because</font>
+
+194
+00:09:38,079 --> 00:09:41,859
+remember the other one we darkened<font color="#E5E5E5"> so</font>
+
+195
+00:09:40,060 --> 00:09:44,050
+this one will just<font color="#E5E5E5"> have just a regular</font>
+
+196
+00:09:41,860 --> 00:09:45,459
+<font color="#CCCCCC">primary</font><font color="#E5E5E5"> color you'll still be</font><font color="#CCCCCC"> able to</font>
+
+197
+00:09:44,050 --> 00:09:49,120
+see through<font color="#CCCCCC"> it because</font><font color="#E5E5E5"> the menu class</font>
+
+198
+00:09:45,459 --> 00:09:53,489
+has the opacity<font color="#E5E5E5"> and we also want to set</font>
+
+199
+00:09:49,120 --> 00:09:57,040
+<font color="#E5E5E5">the ease out here so let's say include</font>
+
+200
+00:09:53,490 --> 00:09:59,160
+he's out and we're gonna do the same
+
+201
+00:09:57,040 --> 00:10:05,170
+<font color="#E5E5E5">thing with the translate3d</font>
+
+202
+00:09:59,160 --> 00:10:07,630
+so let's grab this and actually<font color="#E5E5E5"> put that</font>
+
+203
+00:10:05,170 --> 00:10:09,099
+right here<font color="#CCCCCC"> except this</font><font color="#E5E5E5"> time remember we</font>
+
+204
+00:10:07,630 --> 00:10:11,769
+wanted to come in from<font color="#E5E5E5"> the top</font><font color="#CCCCCC"> so it's</font>
+
+205
+00:10:09,100 --> 00:10:14,170
+<font color="#E5E5E5">this middle value is gonna be 100%</font><font color="#CCCCCC"> we're</font>
+
+206
+00:10:11,769 --> 00:10:16,660
+pushing<font color="#E5E5E5"> it a hundred percent</font><font color="#CCCCCC"> up and then</font>
+
+207
+00:10:14,170 --> 00:10:18,370
+we<font color="#CCCCCC"> on show we want it to come down so</font>
+
+208
+00:10:16,660 --> 00:10:23,050
+<font color="#CCCCCC">we're gonna</font><font color="#E5E5E5"> do the same thing</font><font color="#CCCCCC"> we'll grab</font>
+
+209
+00:10:18,370 --> 00:10:25,180
+this<font color="#E5E5E5"> and show put that in here except</font>
+
+210
+00:10:23,050 --> 00:10:27,609
+actually<font color="#E5E5E5"> no this is the same exact thing</font>
+
+211
+00:10:25,180 --> 00:10:34,329
+we<font color="#E5E5E5"> just wanted</font><font color="#CCCCCC"> to come back to its place</font>
+
+212
+00:10:27,610 --> 00:10:36,610
+<font color="#E5E5E5">so it'll slide in from bottom let's try</font>
+
+213
+00:10:34,329 --> 00:10:39,699
+it<font color="#CCCCCC"> let's</font><font color="#E5E5E5"> save and now if I</font><font color="#CCCCCC"> click that</font>
+
+214
+00:10:36,610 --> 00:10:40,899
+<font color="#E5E5E5">there we go</font><font color="#CCCCCC"> alright so let's handle</font><font color="#E5E5E5"> the</font>
+
+215
+00:10:39,699 --> 00:10:42,880
+portrait<font color="#CCCCCC"> because right now it's</font>
+
+216
+00:10:40,899 --> 00:10:45,010
+<font color="#E5E5E5">completely empty</font><font color="#CCCCCC"> remember we have a div</font>
+
+217
+00:10:42,880 --> 00:10:47,199
+with<font color="#CCCCCC"> the class of portrait inside the</font>
+
+218
+00:10:45,010 --> 00:10:48,699
+menu branding<font color="#E5E5E5"> so we won't you still want</font>
+
+219
+00:10:47,199 --> 00:10:50,649
+<font color="#CCCCCC">to be within the branding and this is</font>
+
+220
+00:10:48,699 --> 00:10:52,269
+where that bracket colorizer comes in
+
+221
+00:10:50,649 --> 00:10:55,269
+handy so you<font color="#E5E5E5"> can tell where you're at</font>
+
+222
+00:10:52,269 --> 00:11:00,300
+see the different colors here<font color="#E5E5E5"> so</font><font color="#CCCCCC"> we're</font>
+
+223
+00:10:55,269 --> 00:11:00,300
+gonna<font color="#E5E5E5"> go</font><font color="#CCCCCC"> right here and</font><font color="#E5E5E5"> let's say dot</font>
+
+224
+00:11:00,540 --> 00:11:08,709
+portrait and we're gonna set the width
+
+225
+00:11:05,170 --> 00:11:13,510
+of this to 250 pixels we're going to set
+
+226
+00:11:08,710 --> 00:11:18,280
+the height<font color="#CCCCCC"> to 250 pixels and then</font><font color="#E5E5E5"> the</font>
+
+227
+00:11:13,510 --> 00:11:20,410
+<font color="#E5E5E5">background we're gonna set</font><font color="#CCCCCC"> that to a URL</font>
+
+228
+00:11:18,280 --> 00:11:22,810
+<font color="#CCCCCC">you could put this in a variable for</font>
+
+229
+00:11:20,410 --> 00:11:25,150
+easier access but I think it's fine<font color="#E5E5E5"> so</font>
+
+230
+00:11:22,810 --> 00:11:31,479
+dot dot slash<font color="#E5E5E5"> into the image folder</font><font color="#CCCCCC"> and</font>
+
+231
+00:11:25,150 --> 00:11:33,340
+then we want portrait dot<font color="#E5E5E5"> jpg okay I</font>
+
+232
+00:11:31,480 --> 00:11:37,840
+also want it<font color="#CCCCCC"> to be circular so we're</font>
+
+233
+00:11:33,340 --> 00:11:39,460
+going<font color="#E5E5E5"> to</font><font color="#CCCCCC"> give it a border radius</font><font color="#E5E5E5"> of</font><font color="#CCCCCC"> 50%</font>
+
+234
+00:11:37,840 --> 00:11:41,650
+which<font color="#E5E5E5"> will make it</font><font color="#CCCCCC"> into a</font><font color="#E5E5E5"> circle and</font>
+
+235
+00:11:39,460 --> 00:11:45,160
+then I'm gonna add a border to<font color="#CCCCCC"> it which</font>
+
+236
+00:11:41,650 --> 00:11:47,709
+will be<font color="#CCCCCC"> Solid</font><font color="#E5E5E5"> 3</font><font color="#CCCCCC"> pixels</font><font color="#E5E5E5"> and</font><font color="#CCCCCC"> we want it</font><font color="#E5E5E5"> to</font>
+
+237
+00:11:45,160 --> 00:11:52,959
+be the secondary color so let's put the
+
+238
+00:11:47,710 --> 00:11:56,230
+variable of secondary - color<font color="#E5E5E5"> okay let's</font>
+
+239
+00:11:52,960 --> 00:11:57,960
+try<font color="#E5E5E5"> it out we'll save and now there we</font>
+
+240
+00:11:56,230 --> 00:12:01,870
+go<font color="#E5E5E5"> get the little portrait</font>
+
+241
+00:11:57,960 --> 00:12:06,100
+<font color="#E5E5E5">so now let's handle the nav items so I'm</font>
+
+242
+00:12:01,870 --> 00:12:11,550
+gonna go<font color="#CCCCCC"> say</font><font color="#E5E5E5"> right outside here still</font>
+
+243
+00:12:06,100 --> 00:12:14,230
+within the menu<font color="#E5E5E5"> and say dot nav - item</font>
+
+244
+00:12:11,550 --> 00:12:16,270
+<font color="#E5E5E5">so let's see we're</font><font color="#CCCCCC"> gonna do the same</font>
+
+245
+00:12:14,230 --> 00:12:19,750
+thing with the translate3d we basically
+
+246
+00:12:16,270 --> 00:12:27,300
+want it to be off the<font color="#E5E5E5"> screen until</font><font color="#CCCCCC"> we</font>
+
+247
+00:12:19,750 --> 00:12:27,300
+get the show so let's say transform
+
+248
+00:12:27,930 --> 00:12:34,300
+<font color="#E5E5E5">translate3d now we're not going</font><font color="#CCCCCC"> up and</font>
+
+249
+00:12:32,500 --> 00:12:36,070
+<font color="#E5E5E5">down we're going left and right so we're</font>
+
+250
+00:12:34,300 --> 00:12:40,089
+dealing<font color="#CCCCCC"> with the first parameter</font><font color="#E5E5E5"> and I'm</font>
+
+251
+00:12:36,070 --> 00:12:42,100
+<font color="#E5E5E5">gonna say 600 pixels</font><font color="#CCCCCC"> okay so basically</font>
+
+252
+00:12:40,089 --> 00:12:45,730
+<font color="#E5E5E5">we're moving it off the</font><font color="#CCCCCC"> screen</font><font color="#E5E5E5"> to</font><font color="#CCCCCC"> the</font>
+
+253
+00:12:42,100 --> 00:12:49,500
+right 600 pixels<font color="#E5E5E5"> to start with and we</font>
+
+254
+00:12:45,730 --> 00:12:49,500
+<font color="#CCCCCC">want to include</font><font color="#E5E5E5"> our ease out</font>
+
+255
+00:12:51,240 --> 00:12:59,160
+and then when the show class comes we
+
+256
+00:12:55,649 --> 00:13:02,369
+can actually<font color="#E5E5E5"> just copy this so when the</font>
+
+257
+00:12:59,160 --> 00:13:10,980
+show class comes<font color="#E5E5E5"> we want to slide in</font>
+
+258
+00:13:02,369 --> 00:13:13,350
+from right like that<font color="#CCCCCC"> all right</font><font color="#E5E5E5"> so yeah</font>
+
+259
+00:13:10,980 --> 00:13:15,540
+let's save that<font color="#E5E5E5"> and see what happens</font>
+
+260
+00:13:13,350 --> 00:13:17,639
+when<font color="#E5E5E5"> we click all right</font><font color="#CCCCCC"> now</font><font color="#E5E5E5"> snow</font><font color="#CCCCCC"> tiss</font>
+
+261
+00:13:15,540 --> 00:13:20,819
+how it is<font color="#E5E5E5"> sliding in from the right but</font>
+
+262
+00:13:17,639 --> 00:13:24,540
+it's it's<font color="#CCCCCC"> not right the whole entire</font>
+
+263
+00:13:20,819 --> 00:13:27,540
+<font color="#CCCCCC">thing is</font><font color="#E5E5E5"> coming in</font><font color="#CCCCCC"> so what we're</font>
+
+264
+00:13:24,540 --> 00:13:30,569
+actually going<font color="#E5E5E5"> to do here is create a</font>
+
+265
+00:13:27,540 --> 00:13:32,160
+delay okay so for each item when<font color="#CCCCCC"> it</font>
+
+266
+00:13:30,569 --> 00:13:33,509
+slides in we're<font color="#E5E5E5"> gonna create a delay so</font>
+
+267
+00:13:32,160 --> 00:13:36,959
+we're gonna we're actually going to<font color="#E5E5E5"> use</font>
+
+268
+00:13:33,509 --> 00:13:39,809
+<font color="#CCCCCC">a sass for loop here</font><font color="#E5E5E5"> I'm gonna go down</font>
+
+269
+00:13:36,959 --> 00:13:42,829
+<font color="#E5E5E5">to the bottom and let's just put a</font>
+
+270
+00:13:39,809 --> 00:13:50,249
+comment<font color="#E5E5E5"> in here and we'll say delay</font>
+
+271
+00:13:42,829 --> 00:13:52,559
+delay each<font color="#E5E5E5"> nav item slide by 0.1 seconds</font>
+
+272
+00:13:50,249 --> 00:13:56,490
+so we want to set we want<font color="#E5E5E5"> to do a for</font>
+
+273
+00:13:52,559 --> 00:13:58,829
+<font color="#CCCCCC">loop so at</font><font color="#E5E5E5"> 4 and we basically want to</font>
+
+274
+00:13:56,490 --> 00:14:02,459
+just create<font color="#E5E5E5"> like if you do a for loop in</font>
+
+275
+00:13:58,829 --> 00:14:04,229
+Java<font color="#CCCCCC"> Script you'll use like X or Y or X</font>
+
+276
+00:14:02,459 --> 00:14:06,209
+or<font color="#E5E5E5"> I or something like</font><font color="#CCCCCC"> that as an</font>
+
+277
+00:14:04,230 --> 00:14:10,639
+iterator<font color="#CCCCCC"> so I'm going to just use</font><font color="#E5E5E5"> money</font>
+
+278
+00:14:06,209 --> 00:14:15,929
+<font color="#E5E5E5">sign X and we're gonna say from 1</font>
+
+279
+00:14:10,639 --> 00:14:19,829
+through 4 because we<font color="#CCCCCC"> have 4 links</font><font color="#E5E5E5"> okay</font>
+
+280
+00:14:15,929 --> 00:14:23,549
+<font color="#CCCCCC">are 4 items so it's like it's like</font><font color="#E5E5E5"> in</font>
+
+281
+00:14:19,829 --> 00:14:27,628
+JavaScript doing<font color="#E5E5E5"> 4 and then saying like</font>
+
+282
+00:14:23,549 --> 00:14:32,339
+let's I or in this<font color="#E5E5E5"> case let X equal</font><font color="#CCCCCC"> 0</font>
+
+283
+00:14:27,629 --> 00:14:36,299
+<font color="#E5E5E5">and then saying as long as I is as long</font>
+
+284
+00:14:32,339 --> 00:14:38,119
+<font color="#E5E5E5">as I</font><font color="#CCCCCC"> is less than 4 and then I plus plus</font>
+
+285
+00:14:36,299 --> 00:14:40,740
+it's<font color="#E5E5E5"> kind of like doing that in</font>
+
+286
+00:14:38,119 --> 00:14:44,459
+<font color="#E5E5E5">JavaScript or</font><font color="#CCCCCC"> or any language really</font><font color="#E5E5E5"> any</font>
+
+287
+00:14:40,740 --> 00:14:48,299
+for loop<font color="#CCCCCC"> so for</font><font color="#E5E5E5"> each</font><font color="#CCCCCC"> one</font><font color="#E5E5E5"> we want to take</font>
+
+288
+00:14:44,459 --> 00:14:51,138
+the nav item<font color="#E5E5E5"> so now I've - item and we</font>
+
+289
+00:14:48,299 --> 00:14:56,749
+want to take the nth child so<font color="#E5E5E5"> : nth</font>
+
+290
+00:14:51,139 --> 00:14:56,749
+child remember we can select each one
+
+291
+00:14:56,860 --> 00:15:03,680
+so and child.and<font color="#E5E5E5"> in here like if we look</font>
+
+292
+00:15:01,760 --> 00:15:06,350
+at the<font color="#E5E5E5"> links the the first one would be</font>
+
+293
+00:15:03,680 --> 00:15:08,120
+this<font color="#E5E5E5"> one second third fourth but we want</font>
+
+294
+00:15:06,350 --> 00:15:10,280
+to loop through and<font color="#E5E5E5"> we want a variable</font>
+
+295
+00:15:08,120 --> 00:15:12,680
+in here<font color="#CCCCCC"> now I can't</font><font color="#E5E5E5"> just put money sign</font>
+
+296
+00:15:10,280 --> 00:15:15,650
+X that'll give us an error we have<font color="#CCCCCC"> to</font>
+
+297
+00:15:12,680 --> 00:15:17,479
+actually wrap this<font color="#E5E5E5"> in a number sign</font><font color="#CCCCCC"> and</font>
+
+298
+00:15:15,650 --> 00:15:22,010
+then curly braces it's kind of like a
+
+299
+00:15:17,480 --> 00:15:26,300
+template literal in<font color="#E5E5E5"> Java in es6 so if we</font>
+
+300
+00:15:22,010 --> 00:15:28,910
+do<font color="#CCCCCC"> that</font><font color="#E5E5E5"> for each one for each end child</font>
+
+301
+00:15:26,300 --> 00:15:31,160
+for<font color="#E5E5E5"> basically for each link here we want</font>
+
+302
+00:15:28,910 --> 00:15:35,060
+to set a transition delay<font color="#CCCCCC"> so we'll say</font>
+
+303
+00:15:31,160 --> 00:15:38,000
+transition - delay and we want to set
+
+304
+00:15:35,060 --> 00:15:40,520
+the<font color="#E5E5E5"> delay to whatever the variable</font><font color="#CCCCCC"> is so</font>
+
+305
+00:15:38,000 --> 00:15:43,010
+X which is going<font color="#CCCCCC"> to you know</font><font color="#E5E5E5"> start at</font>
+
+306
+00:15:40,520 --> 00:15:48,829
+<font color="#CCCCCC">one go</font><font color="#E5E5E5"> through four and then we want to</font>
+
+307
+00:15:43,010 --> 00:15:51,080
+<font color="#E5E5E5">multiply it by 0.1 seconds okay we</font><font color="#CCCCCC"> don't</font>
+
+308
+00:15:48,830 --> 00:15:52,580
+<font color="#E5E5E5">want them all</font><font color="#CCCCCC"> to be delayed by 0.1</font>
+
+309
+00:15:51,080 --> 00:15:54,920
+seconds<font color="#E5E5E5"> because it'll still all come in</font>
+
+310
+00:15:52,580 --> 00:15:57,620
+at the<font color="#CCCCCC"> same time we want like</font><font color="#E5E5E5"> 1 times</font>
+
+311
+00:15:54,920 --> 00:15:59,959
+<font color="#E5E5E5">this</font><font color="#CCCCCC"> 2 times</font><font color="#E5E5E5"> this</font><font color="#CCCCCC"> 3 times</font><font color="#E5E5E5"> this so that</font>
+
+312
+00:15:57,620 --> 00:16:01,670
+each<font color="#E5E5E5"> one comes in separately</font><font color="#CCCCCC"> okay</font>
+
+313
+00:15:59,960 --> 00:16:04,970
+<font color="#CCCCCC">hopefully</font><font color="#E5E5E5"> that makes sense let's save</font>
+
+314
+00:16:01,670 --> 00:16:08,140
+this and<font color="#CCCCCC"> then let's</font><font color="#E5E5E5"> try it out and there</font>
+
+315
+00:16:04,970 --> 00:16:12,290
+we go<font color="#E5E5E5"> so they kind of just fly in</font>
+
+316
+00:16:08,140 --> 00:16:15,560
+awesome<font color="#CCCCCC"> alright so the next</font><font color="#E5E5E5"> thing I want</font>
+
+317
+00:16:12,290 --> 00:16:18,650
+<font color="#E5E5E5">to do is style the links because right</font>
+
+318
+00:16:15,560 --> 00:16:20,510
+now they're way too<font color="#E5E5E5"> small</font><font color="#CCCCCC"> we need you</font>
+
+319
+00:16:18,650 --> 00:16:22,250
+know a little<font color="#E5E5E5"> bit of spacing</font><font color="#CCCCCC"> I also want</font>
+
+320
+00:16:20,510 --> 00:16:24,470
+them to<font color="#E5E5E5"> be all capitalized or uppercase</font>
+
+321
+00:16:22,250 --> 00:16:27,650
+<font color="#E5E5E5">so let's let's style those I'm gonna go</font>
+
+322
+00:16:24,470 --> 00:16:36,440
+right<font color="#CCCCCC"> here actually let's see where do I</font>
+
+323
+00:16:27,650 --> 00:16:39,170
+want<font color="#E5E5E5"> to go let's go right here</font><font color="#CCCCCC"> so we're</font>
+
+324
+00:16:36,440 --> 00:16:46,010
+still within the<font color="#E5E5E5"> menu and we're gonna do</font>
+
+325
+00:16:39,170 --> 00:16:47,870
+<font color="#E5E5E5">our nav links so dot nav - link and</font>
+
+326
+00:16:46,010 --> 00:16:49,640
+let's see what how do we<font color="#E5E5E5"> want to style</font>
+
+327
+00:16:47,870 --> 00:16:54,810
+these let's let's display them as
+
+328
+00:16:49,640 --> 00:17:04,270
+<font color="#CCCCCC">in-line blocks in line</font>
+
+329
+00:16:54,810 --> 00:17:06,698
+block and position them<font color="#CCCCCC"> relative and</font>
+
+330
+00:17:04,270 --> 00:17:08,980
+let's let's increase the font size<font color="#E5E5E5"> so</font>
+
+331
+00:17:06,699 --> 00:17:12,400
+we'll say font size and<font color="#E5E5E5"> I'm just going</font>
+
+332
+00:17:08,980 --> 00:17:15,429
+<font color="#E5E5E5">to use 30 pixels and then let's do a</font>
+
+333
+00:17:12,400 --> 00:17:20,140
+text<font color="#E5E5E5"> transform to make them all</font>
+
+334
+00:17:15,429 --> 00:17:24,360
+uppercase and let's set some padding on
+
+335
+00:17:20,140 --> 00:17:26,740
+the<font color="#CCCCCC"> top and bottom</font><font color="#E5E5E5"> so 15 top and bottom</font>
+
+336
+00:17:24,359 --> 00:17:29,199
+and I'll actually<font color="#CCCCCC"> we'll</font><font color="#E5E5E5"> just do one</font><font color="#CCCCCC"> rim</font>
+
+337
+00:17:26,740 --> 00:17:34,330
+<font color="#E5E5E5">I'll use REM units and then</font><font color="#CCCCCC"> 0 on the</font>
+
+338
+00:17:29,200 --> 00:17:39,820
+left and right<font color="#CCCCCC"> font weight font weight</font>
+
+339
+00:17:34,330 --> 00:17:44,020
+I'm<font color="#CCCCCC"> gonna</font><font color="#E5E5E5"> do 300 color we're gonna for</font>
+
+340
+00:17:39,820 --> 00:17:46,360
+now just<font color="#E5E5E5"> set it to white and then</font><font color="#CCCCCC"> let's</font>
+
+341
+00:17:44,020 --> 00:17:48,100
+also make<font color="#CCCCCC"> sure that there's no I know</font>
+
+342
+00:17:46,360 --> 00:17:50,800
+there's no underline<font color="#CCCCCC"> but just let's make</font>
+
+343
+00:17:48,100 --> 00:17:55,000
+sure<font color="#E5E5E5"> so text decoration we want that set</font>
+
+344
+00:17:50,800 --> 00:17:58,200
+to<font color="#E5E5E5"> none and then let's let's add the</font>
+
+345
+00:17:55,000 --> 00:18:03,460
+<font color="#CCCCCC">transition as well</font><font color="#E5E5E5"> so we want to include</font>
+
+346
+00:17:58,200 --> 00:18:07,990
+<font color="#E5E5E5">ease in our ease out so let's save that</font>
+
+347
+00:18:03,460 --> 00:18:12,340
+<font color="#E5E5E5">there we go so if we click come in from</font>
+
+348
+00:18:07,990 --> 00:18:16,270
+the side good so on hover<font color="#E5E5E5"> I want them to</font>
+
+349
+00:18:12,340 --> 00:18:18,340
+<font color="#E5E5E5">be the secondary color also the current</font>
+
+350
+00:18:16,270 --> 00:18:20,770
+<font color="#E5E5E5">page that we're on should be the second</font>
+
+351
+00:18:18,340 --> 00:18:22,928
+<font color="#E5E5E5">and secondary color so the current page</font>
+
+352
+00:18:20,770 --> 00:18:26,200
+is<font color="#E5E5E5"> going to be attached</font><font color="#CCCCCC"> to the nav item</font>
+
+353
+00:18:22,929 --> 00:18:28,809
+<font color="#CCCCCC">if we look at the index.html you'll see</font>
+
+354
+00:18:26,200 --> 00:18:30,670
+we add current<font color="#E5E5E5"> did I even do it no I</font>
+
+355
+00:18:28,809 --> 00:18:33,790
+didn't
+
+356
+00:18:30,670 --> 00:18:35,590
+so this first nav item<font color="#E5E5E5"> since this is the</font>
+
+357
+00:18:33,790 --> 00:18:38,800
+<font color="#E5E5E5">index.html page I'm going to</font><font color="#CCCCCC"> add the</font>
+
+358
+00:18:35,590 --> 00:18:41,649
+class<font color="#E5E5E5"> of current and save and now we'll</font>
+
+359
+00:18:38,800 --> 00:18:47,290
+go<font color="#CCCCCC"> back here and for a nav item</font><font color="#E5E5E5"> let's go</font>
+
+360
+00:18:41,650 --> 00:18:49,540
+down and say<font color="#E5E5E5"> ampersand dot current and</font>
+
+361
+00:18:47,290 --> 00:18:52,960
+we want the link so we're gonna say
+
+362
+00:18:49,540 --> 00:18:58,420
+inside that the link is what we want to
+
+363
+00:18:52,960 --> 00:19:03,690
+<font color="#E5E5E5">actually color so let's see we want to</font>
+
+364
+00:18:58,420 --> 00:19:03,690
+say<font color="#E5E5E5"> color which will be secondary color</font>
+
+365
+00:19:03,969 --> 00:19:10,399
+<font color="#E5E5E5">all right so let's save that and check</font>
+
+366
+00:19:07,070 --> 00:19:12,649
+it out<font color="#CCCCCC"> okay so now the home is</font><font color="#E5E5E5"> yellow</font>
+
+367
+00:19:10,399 --> 00:19:15,708
+and<font color="#E5E5E5"> again we also want hover which is</font>
+
+368
+00:19:12,649 --> 00:19:20,149
+going<font color="#E5E5E5"> to go on nav link so I can</font>
+
+369
+00:19:15,709 --> 00:19:23,019
+<font color="#CCCCCC">actually just I'll</font><font color="#E5E5E5"> just</font><font color="#CCCCCC"> put it in</font><font color="#E5E5E5"> here</font>
+
+370
+00:19:20,149 --> 00:19:28,758
+so<font color="#E5E5E5"> within nav link we're gonna say</font>
+
+371
+00:19:23,019 --> 00:19:33,769
+ampersand<font color="#CCCCCC"> : hover and we want the</font><font color="#E5E5E5"> color</font>
+
+372
+00:19:28,759 --> 00:19:39,379
+to be<font color="#E5E5E5"> the secondary color so now when I</font>
+
+373
+00:19:33,769 --> 00:19:40,940
+hover we get that yellow<font color="#E5E5E5"> alright guys</font><font color="#CCCCCC"> so</font>
+
+374
+00:19:39,379 --> 00:19:43,609
+I think I<font color="#CCCCCC"> think that's it for the</font>
+
+375
+00:19:40,940 --> 00:19:45,859
+<font color="#E5E5E5">overlay as far as this now we do</font><font color="#CCCCCC"> have</font>
+
+376
+00:19:43,609 --> 00:19:47,779
+<font color="#E5E5E5">the responsive version to do because if</font>
+
+377
+00:19:45,859 --> 00:19:49,879
+we look at the responsiveness<font color="#CCCCCC"> so you can</font>
+
+378
+00:19:47,779 --> 00:19:51,769
+see this looks like crap<font color="#CCCCCC"> and then the</font>
+
+379
+00:19:49,879 --> 00:19:53,149
+overlay really looks<font color="#E5E5E5"> like crap</font><font color="#CCCCCC"> so we</font>
+
+380
+00:19:51,769 --> 00:19:56,450
+want to kind<font color="#E5E5E5"> of we want to change this</font>
+
+381
+00:19:53,149 --> 00:19:57,859
+up<font color="#E5E5E5"> so we're gonna do a couple</font><font color="#CCCCCC"> things but</font>
+
+382
+00:19:56,450 --> 00:19:59,570
+<font color="#E5E5E5">before we do that let's just make a</font>
+
+383
+00:19:57,859 --> 00:20:02,658
+quick commit because<font color="#E5E5E5"> we did do the</font>
+
+384
+00:19:59,570 --> 00:20:05,329
+<font color="#E5E5E5">overlay for for basically for desktops</font>
+
+385
+00:20:02,659 --> 00:20:10,009
+so I'm<font color="#E5E5E5"> gonna go to</font><font color="#CCCCCC"> my other terminal</font>
+
+386
+00:20:05,329 --> 00:20:17,200
+here<font color="#CCCCCC"> and let's just</font><font color="#E5E5E5"> say git add all and</font>
+
+387
+00:20:10,009 --> 00:20:23,479
+let's do git commit and<font color="#E5E5E5"> whoops let's say</font>
+
+388
+00:20:17,200 --> 00:20:26,149
+<font color="#E5E5E5">we'll</font><font color="#CCCCCC"> just do menu overlay alright so</font>
+
+389
+00:20:23,479 --> 00:20:31,070
+<font color="#E5E5E5">we'll go back to our</font><font color="#CCCCCC"> other terminal here</font>
+
+390
+00:20:26,149 --> 00:20:33,109
+<font color="#CCCCCC">and now let's</font><font color="#E5E5E5"> create some</font><font color="#CCCCCC"> mix-ins for</font>
+
+391
+00:20:31,070 --> 00:20:35,599
+our<font color="#E5E5E5"> media queries I like to put them</font>
+
+392
+00:20:33,109 --> 00:20:37,939
+<font color="#E5E5E5">inside of</font><font color="#CCCCCC"> mix-ins</font><font color="#E5E5E5"> when I use SAS so in</font>
+
+393
+00:20:35,599 --> 00:20:43,369
+<font color="#E5E5E5">our config file let's go down to</font><font color="#CCCCCC"> the</font>
+
+394
+00:20:37,940 --> 00:20:47,659
+very<font color="#CCCCCC"> bottom</font><font color="#E5E5E5"> and we'll say media query</font>
+
+395
+00:20:43,369 --> 00:20:50,029
+mix-ins<font color="#E5E5E5"> so to do that we'll say add mix</font>
+
+396
+00:20:47,659 --> 00:20:53,450
+in and we're<font color="#CCCCCC"> gonna have small medium</font>
+
+397
+00:20:50,029 --> 00:20:58,369
+large and<font color="#CCCCCC"> extra large</font><font color="#E5E5E5"> so let's do mobile</font>
+
+398
+00:20:53,450 --> 00:21:01,129
+not mobile<font color="#CCCCCC"> we'll say media SM that'll be</font>
+
+399
+00:20:58,369 --> 00:21:02,958
+the name of<font color="#CCCCCC"> our mixin and here we want</font>
+
+400
+00:21:01,129 --> 00:21:08,299
+<font color="#E5E5E5">to put the actual media query so at</font>
+
+401
+00:21:02,959 --> 00:21:10,429
+media and we're gonna do screen and and
+
+402
+00:21:08,299 --> 00:21:15,200
+then the size so we're gonna say max
+
+403
+00:21:10,429 --> 00:21:16,130
+width<font color="#E5E5E5"> of 500 pixels</font><font color="#CCCCCC"> okay so this is how</font>
+
+404
+00:21:15,200 --> 00:21:17,960
+you<font color="#E5E5E5"> create a</font>
+
+405
+00:21:16,130 --> 00:21:21,410
+media query and what this means<font color="#E5E5E5"> is that</font>
+
+406
+00:21:17,960 --> 00:21:24,260
+any CSS we put<font color="#CCCCCC"> in</font><font color="#E5E5E5"> inside of here will</font>
+
+407
+00:21:21,410 --> 00:21:27,620
+only apply if the screen<font color="#E5E5E5"> is 500 pixels</font>
+
+408
+00:21:24,260 --> 00:21:29,180
+or less<font color="#CCCCCC"> okay so 500</font><font color="#E5E5E5"> pixels is I don't</font>
+
+409
+00:21:27,620 --> 00:21:32,300
+<font color="#E5E5E5">know it's like</font><font color="#CCCCCC"> around here or something</font>
+
+410
+00:21:29,180 --> 00:21:36,160
+<font color="#CCCCCC">so</font><font color="#E5E5E5"> anything we</font><font color="#CCCCCC"> put in here would be in</font>
+
+411
+00:21:32,300 --> 00:21:38,870
+for that size<font color="#CCCCCC"> now since this is a mixin</font>
+
+412
+00:21:36,160 --> 00:21:40,490
+<font color="#E5E5E5">we're not gonna actually put our CSS in</font>
+
+413
+00:21:38,870 --> 00:21:42,739
+here I want to<font color="#E5E5E5"> be able to use this mix</font>
+
+414
+00:21:40,490 --> 00:21:45,410
+in elsewhere so all we have<font color="#E5E5E5"> to do is in</font>
+
+415
+00:21:42,740 --> 00:21:48,470
+here is put content so anything we put
+
+416
+00:21:45,410 --> 00:21:51,110
+<font color="#E5E5E5">inside this mix in in another file we</font>
+
+417
+00:21:48,470 --> 00:21:53,660
+can just we<font color="#CCCCCC"> can just add this mix in and</font>
+
+418
+00:21:51,110 --> 00:21:56,240
+<font color="#E5E5E5">it'll get automatically put inside</font><font color="#CCCCCC"> here</font>
+
+419
+00:21:53,660 --> 00:22:01,340
+where we put<font color="#E5E5E5"> content so we're going to</font>
+
+420
+00:21:56,240 --> 00:22:05,920
+just<font color="#E5E5E5"> grab this and we need three</font><font color="#CCCCCC"> more so</font>
+
+421
+00:22:01,340 --> 00:22:09,379
+this one here<font color="#E5E5E5"> is gonna</font><font color="#CCCCCC"> be let's say</font>
+
+422
+00:22:05,920 --> 00:22:15,380
+medium<font color="#E5E5E5"> action any comments it's obvious</font>
+
+423
+00:22:09,380 --> 00:22:19,760
+so media media MD and this is going<font color="#CCCCCC"> to</font>
+
+424
+00:22:15,380 --> 00:22:25,000
+be<font color="#E5E5E5"> four screens that are 768 and under</font>
+
+425
+00:22:19,760 --> 00:22:29,420
+okay so 768<font color="#CCCCCC"> and under and then</font><font color="#E5E5E5"> for large</font>
+
+426
+00:22:25,000 --> 00:22:33,200
+<font color="#E5E5E5">so we'll do LG for large we want to do a</font>
+
+427
+00:22:29,420 --> 00:22:35,720
+range<font color="#E5E5E5"> so</font><font color="#CCCCCC"> I'm gonna add let's see let's</font>
+
+428
+00:22:33,200 --> 00:22:39,200
+add right<font color="#CCCCCC"> here a set</font><font color="#E5E5E5"> of</font><font color="#CCCCCC"> parentheses and</font>
+
+429
+00:22:35,720 --> 00:22:43,910
+we'll<font color="#CCCCCC"> say min width so</font><font color="#E5E5E5"> for screens that</font>
+
+430
+00:22:39,200 --> 00:22:47,510
+have<font color="#CCCCCC"> a min width of 769 pixels</font><font color="#E5E5E5"> and I use</font>
+
+431
+00:22:43,910 --> 00:22:51,430
+69<font color="#E5E5E5"> because it's one pixel after this so</font>
+
+432
+00:22:47,510 --> 00:22:56,450
+if<font color="#E5E5E5"> it's 769 if it's between that and a</font>
+
+433
+00:22:51,430 --> 00:22:59,600
+max width of let's say<font color="#E5E5E5"> one one seven</font>
+
+434
+00:22:56,450 --> 00:23:02,480
+<font color="#CCCCCC">zero okay</font><font color="#E5E5E5"> so if it's between that whoops</font>
+
+435
+00:22:59,600 --> 00:23:05,270
+I should have an<font color="#CCCCCC"> end here as well</font><font color="#E5E5E5"> let me</font>
+
+436
+00:23:02,480 --> 00:23:09,860
+<font color="#E5E5E5">just close this up</font><font color="#CCCCCC"> so if it's between</font>
+
+437
+00:23:05,270 --> 00:23:12,650
+this and this then this these styles
+
+438
+00:23:09,860 --> 00:23:15,409
+<font color="#E5E5E5">will apply okay so basically if it's</font>
+
+439
+00:23:12,650 --> 00:23:18,260
+between<font color="#E5E5E5"> like 768 which I'd estimate like</font>
+
+440
+00:23:15,410 --> 00:23:20,240
+right here and then<font color="#CCCCCC"> 1 170 which would</font>
+
+441
+00:23:18,260 --> 00:23:22,580
+probably<font color="#E5E5E5"> be like I don't know right here</font>
+
+442
+00:23:20,240 --> 00:23:27,740
+<font color="#CCCCCC">or something like that</font><font color="#E5E5E5"> that would be the</font>
+
+443
+00:23:22,580 --> 00:23:28,980
+media large now media<font color="#CCCCCC"> extra large we</font>
+
+444
+00:23:27,740 --> 00:23:32,330
+want to
+
+445
+00:23:28,980 --> 00:23:34,230
+to another range<font color="#E5E5E5"> so let's say men</font>
+
+446
+00:23:32,330 --> 00:23:38,149
+actually<font color="#CCCCCC"> know we don't</font><font color="#E5E5E5"> want to do a</font>
+
+447
+00:23:34,230 --> 00:23:44,580
+range here we're<font color="#CCCCCC"> just gonna say</font><font color="#E5E5E5"> men with</font>
+
+448
+00:23:38,150 --> 00:23:47,419
+<font color="#E5E5E5">I want to same end with of one pixel</font>
+
+449
+00:23:44,580 --> 00:23:50,399
+<font color="#E5E5E5">above this which is one one</font><font color="#CCCCCC"> seven</font><font color="#E5E5E5"> one</font>
+
+450
+00:23:47,419 --> 00:23:53,100
+<font color="#E5E5E5">okay so anything above that is</font><font color="#CCCCCC"> gonna be</font>
+
+451
+00:23:50,400 --> 00:23:56,400
+this this media query<font color="#E5E5E5"> so if you want</font>
+
+452
+00:23:53,100 --> 00:23:59,189
+<font color="#E5E5E5">something to only display or whatever if</font>
+
+453
+00:23:56,400 --> 00:24:01,080
+you want<font color="#E5E5E5"> some CSS and only huge screens</font>
+
+454
+00:23:59,190 --> 00:24:03,600
+like this then you would you would use
+
+455
+00:24:01,080 --> 00:24:06,600
+this media query<font color="#CCCCCC"> alright so those are</font>
+
+456
+00:24:03,600 --> 00:24:10,290
+the media queries now<font color="#CCCCCC"> we need a place to</font>
+
+457
+00:24:06,600 --> 00:24:12,980
+<font color="#CCCCCC">actually put our responsive CSS so I'm</font>
+
+458
+00:24:10,290 --> 00:24:18,090
+going to<font color="#E5E5E5"> create a new file inside s CSS</font>
+
+459
+00:24:12,980 --> 00:24:21,870
+called mobile dot s CSS<font color="#E5E5E5"> I'm sorry</font>
+
+460
+00:24:18,090 --> 00:24:23,699
+underscore<font color="#CCCCCC"> mobile it's a partial and</font>
+
+461
+00:24:21,870 --> 00:24:30,330
+before I forget let's just go to main s
+
+462
+00:24:23,700 --> 00:24:32,549
+CSS and import<font color="#E5E5E5"> mobile like that</font><font color="#CCCCCC"> alright</font>
+
+463
+00:24:30,330 --> 00:24:35,399
+<font color="#E5E5E5">and I'm also going to just restart down</font>
+
+464
+00:24:32,549 --> 00:24:39,210
+here if I'm<font color="#E5E5E5"> going to</font><font color="#CCCCCC"> ctrl C and then NPM</font>
+
+465
+00:24:35,400 --> 00:24:42,270
+<font color="#E5E5E5">run sass again just in case any time I</font>
+
+466
+00:24:39,210 --> 00:24:45,059
+create<font color="#CCCCCC"> a new</font><font color="#E5E5E5"> file I reset that so in our</font>
+
+467
+00:24:42,270 --> 00:24:48,150
+mobile s CSS we want to use the<font color="#CCCCCC"> mix-ins</font>
+
+468
+00:24:45,059 --> 00:24:50,250
+<font color="#E5E5E5">we just created so this one let's do</font>
+
+469
+00:24:48,150 --> 00:24:52,950
+<font color="#CCCCCC">extra-large first we'll go kind of top</font>
+
+470
+00:24:50,250 --> 00:24:56,850
+to bottom<font color="#E5E5E5"> so this will be for wide</font>
+
+471
+00:24:52,950 --> 00:25:02,580
+screens so to use the mixin we use
+
+472
+00:24:56,850 --> 00:25:06,360
+include and we want media<font color="#CCCCCC"> Excel</font><font color="#E5E5E5"> okay so</font>
+
+473
+00:25:02,580 --> 00:25:10,020
+that<font color="#E5E5E5"> will be for wide screens and let's</font>
+
+474
+00:25:06,360 --> 00:25:12,178
+<font color="#E5E5E5">just grab this so we want three</font><font color="#CCCCCC"> more so</font>
+
+475
+00:25:10,020 --> 00:25:16,889
+the second one here<font color="#CCCCCC"> is</font><font color="#E5E5E5"> gonna</font><font color="#CCCCCC"> be for</font>
+
+476
+00:25:12,179 --> 00:25:20,850
+let's say desktops and laptops and<font color="#E5E5E5"> this</font>
+
+477
+00:25:16,890 --> 00:25:25,020
+is gonna<font color="#E5E5E5"> be our large and then this one</font>
+
+478
+00:25:20,850 --> 00:25:30,090
+here is gonna be<font color="#CCCCCC"> for tablets</font><font color="#E5E5E5"> I'll say</font>
+
+479
+00:25:25,020 --> 00:25:33,960
+tablets and<font color="#E5E5E5"> maybe some small laptops so</font>
+
+480
+00:25:30,090 --> 00:25:38,409
+this will be medium MD and then this one
+
+481
+00:25:33,960 --> 00:25:42,790
+here<font color="#E5E5E5"> is for let's say</font><font color="#CCCCCC"> smartphones</font>
+
+482
+00:25:38,410 --> 00:25:45,430
+so<font color="#E5E5E5"> media SM okay so now</font><font color="#CCCCCC"> anytime you want</font>
+
+483
+00:25:42,790 --> 00:25:48,070
+CSS for a specific<font color="#CCCCCC"> screen size you just</font>
+
+484
+00:25:45,430 --> 00:25:50,890
+<font color="#E5E5E5">put it within one</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> these media queries</font>
+
+485
+00:25:48,070 --> 00:25:52,659
+so I'm<font color="#CCCCCC"> gonna</font><font color="#E5E5E5"> save this and let's let's</font>
+
+486
+00:25:50,890 --> 00:25:54,910
+<font color="#E5E5E5">start with</font><font color="#CCCCCC"> just the before we do the</font>
+
+487
+00:25:52,660 --> 00:25:58,480
+overlay let's<font color="#CCCCCC"> go</font><font color="#E5E5E5"> to get this figure it</font>
+
+488
+00:25:54,910 --> 00:26:00,100
+out so<font color="#CCCCCC"> I want this to be displayed I</font>
+
+489
+00:25:58,480 --> 00:26:02,980
+want everything<font color="#E5E5E5"> like in the middle and</font>
+
+490
+00:26:00,100 --> 00:26:05,290
+in the<font color="#E5E5E5"> the</font><font color="#CCCCCC"> main area here on medium</font>
+
+491
+00:26:02,980 --> 00:26:10,810
+screens and smaller<font color="#CCCCCC"> so let's go</font><font color="#E5E5E5"> into the</font>
+
+492
+00:26:05,290 --> 00:26:11,860
+MD and let's add<font color="#E5E5E5"> main and let's say</font>
+
+493
+00:26:10,810 --> 00:26:16,060
+<font color="#CCCCCC">align</font>
+
+494
+00:26:11,860 --> 00:26:21,600
+- items we want<font color="#E5E5E5"> to align these Center I</font>
+
+495
+00:26:16,060 --> 00:26:24,629
+also want to<font color="#E5E5E5"> text a line text a line</font>
+
+496
+00:26:21,600 --> 00:26:29,230
+<font color="#E5E5E5">when I keep doing that</font><font color="#CCCCCC"> 0</font>
+
+497
+00:26:24,630 --> 00:26:33,480
+<font color="#CCCCCC">text-align:center</font><font color="#E5E5E5"> and save and let's see</font>
+
+498
+00:26:29,230 --> 00:26:33,480
+what are we getting an<font color="#E5E5E5"> error down here</font>
+
+499
+00:26:33,700 --> 00:26:44,470
+no<font color="#CCCCCC"> mixin named media Excel wait a minute</font>
+
+500
+00:26:40,000 --> 00:26:48,370
+<font color="#CCCCCC">let's go</font><font color="#E5E5E5"> into our config oh it has a</font>
+
+501
+00:26:44,470 --> 00:26:51,730
+capital<font color="#E5E5E5"> L we only want this that this to</font>
+
+502
+00:26:48,370 --> 00:26:53,290
+<font color="#E5E5E5">be capital I don't save that and there</font>
+
+503
+00:26:51,730 --> 00:26:57,010
+we go<font color="#E5E5E5"> so now everything's in the middle</font>
+
+504
+00:26:53,290 --> 00:26:59,080
+good<font color="#CCCCCC"> let's see so I also want the</font>
+
+505
+00:26:57,010 --> 00:27:00,700
+heading I'm<font color="#E5E5E5"> going to change the line</font>
+
+506
+00:26:59,080 --> 00:27:03,220
+height because see how much space<font color="#E5E5E5"> is</font><font color="#CCCCCC"> in</font>
+
+507
+00:27:00,700 --> 00:27:09,100
+between here<font color="#CCCCCC"> so inside</font><font color="#E5E5E5"> the main tag</font>
+
+508
+00:27:03,220 --> 00:27:11,320
+right<font color="#CCCCCC"> here let's do a dot LG - heading</font>
+
+509
+00:27:09,100 --> 00:27:16,560
+<font color="#CCCCCC">because that's inside the main tag and</font>
+
+510
+00:27:11,320 --> 00:27:23,159
+we're<font color="#E5E5E5"> gonna set the line height to 1 and</font>
+
+511
+00:27:16,560 --> 00:27:28,200
+let's set margin - bottom<font color="#CCCCCC"> -</font><font color="#E5E5E5"> 1 REM and</font>
+
+512
+00:27:23,160 --> 00:27:33,370
+<font color="#CCCCCC">save and there we go so that looks good</font>
+
+513
+00:27:28,200 --> 00:27:34,870
+<font color="#E5E5E5">let's see</font><font color="#CCCCCC"> let's make it really</font><font color="#E5E5E5"> small so</font>
+
+514
+00:27:33,370 --> 00:27:45,510
+like right<font color="#E5E5E5"> here this</font><font color="#CCCCCC"> is where it changes</font>
+
+515
+00:27:34,870 --> 00:27:45,510
+<font color="#CCCCCC">to</font><font color="#E5E5E5"> MD so MD large MD large I also want</font>
+
+516
+00:27:47,390 --> 00:27:57,590
+let's see let's let's<font color="#E5E5E5"> actually move this</font>
+
+517
+00:27:52,760 --> 00:28:02,570
+down a<font color="#E5E5E5"> bit so for the small inside the</font>
+
+518
+00:27:57,590 --> 00:28:09,860
+small<font color="#E5E5E5"> I'm gonna say main let's just do</font>
+
+519
+00:28:02,570 --> 00:28:14,149
+main ID<font color="#E5E5E5"> home h1 and I'm gonna say from</font>
+
+520
+00:28:09,860 --> 00:28:20,090
+<font color="#E5E5E5">margin top I want</font><font color="#CCCCCC"> it to be 10</font><font color="#E5E5E5"> of</font>
+
+521
+00:28:14,150 --> 00:28:22,520
+<font color="#E5E5E5">viewport</font><font color="#CCCCCC"> heights okay and save so just</font>
+
+522
+00:28:20,090 --> 00:28:25,659
+just so when if this is shorter<font color="#E5E5E5"> I always</font>
+
+523
+00:28:22,520 --> 00:28:28,280
+want it<font color="#E5E5E5"> to be</font><font color="#CCCCCC"> 10 viewport heights I</font>
+
+524
+00:28:25,660 --> 00:28:32,120
+<font color="#CCCCCC">think that's all I need</font><font color="#E5E5E5"> to do for the</font>
+
+525
+00:28:28,280 --> 00:28:34,340
+home page responsiveness<font color="#E5E5E5"> now we want to</font>
+
+526
+00:28:32,120 --> 00:28:36,110
+deal<font color="#E5E5E5"> with the overlay</font><font color="#CCCCCC"> because I mean</font>
+
+527
+00:28:34,340 --> 00:28:38,510
+that<font color="#E5E5E5"> that</font><font color="#CCCCCC"> actually</font><font color="#E5E5E5"> looks okay</font><font color="#CCCCCC"> but once</font>
+
+528
+00:28:36,110 --> 00:28:41,510
+it<font color="#E5E5E5"> gets really small it just it doesn't</font>
+
+529
+00:28:38,510 --> 00:28:42,500
+so<font color="#E5E5E5"> we won't want</font><font color="#CCCCCC"> to fix that so all</font><font color="#E5E5E5"> the</font>
+
+530
+00:28:41,510 --> 00:28:44,390
+stuff that<font color="#E5E5E5"> we're going to do is going to</font>
+
+531
+00:28:42,500 --> 00:28:46,400
+be within<font color="#CCCCCC"> that the tablets and</font><font color="#E5E5E5"> small</font>
+
+532
+00:28:44,390 --> 00:28:49,010
+laptops because this affects<font color="#CCCCCC"> not</font><font color="#E5E5E5"> only</font>
+
+533
+00:28:46,400 --> 00:28:53,720
+the<font color="#E5E5E5"> tablet size but anything below that</font>
+
+534
+00:28:49,010 --> 00:28:55,730
+<font color="#E5E5E5">as well so first thing we'll do</font><font color="#CCCCCC"> is add</font>
+
+535
+00:28:53,720 --> 00:28:59,840
+let's go below the main make sure you're
+
+536
+00:28:55,730 --> 00:29:06,020
+not within<font color="#E5E5E5"> the main and let's say you l</font>
+
+537
+00:28:59,840 --> 00:29:11,000
+dot menu - nav as well as the div dot
+
+538
+00:29:06,020 --> 00:29:14,929
+menu - branding so this will be for both
+
+539
+00:29:11,000 --> 00:29:16,700
+and right now<font color="#CCCCCC"> they're floated to</font><font color="#E5E5E5"> the</font>
+
+540
+00:29:14,929 --> 00:29:20,710
+left so they're<font color="#E5E5E5"> side-by-side we don't</font>
+
+541
+00:29:16,700 --> 00:29:24,049
+want that<font color="#E5E5E5"> so we're gonna say float none</font>
+
+542
+00:29:20,710 --> 00:29:25,429
+<font color="#CCCCCC">we also don't want</font><font color="#E5E5E5"> a width of 50</font><font color="#CCCCCC"> percent</font>
+
+543
+00:29:24,049 --> 00:29:27,379
+for<font color="#CCCCCC"> each we want a</font><font color="#E5E5E5"> hundred percent</font>
+
+544
+00:29:25,429 --> 00:29:30,950
+<font color="#E5E5E5">because</font><font color="#CCCCCC"> we want if we</font><font color="#E5E5E5"> look at the final</font>
+
+545
+00:29:27,380 --> 00:29:32,809
+<font color="#E5E5E5">project here and we go to medium you'll</font>
+
+546
+00:29:30,950 --> 00:29:35,090
+see that<font color="#E5E5E5"> now there are a hundred percent</font>
+
+547
+00:29:32,809 --> 00:29:41,120
+<font color="#E5E5E5">each because they're not floated so</font>
+
+548
+00:29:35,090 --> 00:29:43,639
+let's say with<font color="#E5E5E5"> 100 percent</font><font color="#CCCCCC"> let's see</font>
+
+549
+00:29:41,120 --> 00:29:46,809
+we're also gonna set a<font color="#E5E5E5"> min height of</font>
+
+550
+00:29:43,640 --> 00:29:50,000
+<font color="#CCCCCC">zero</font><font color="#E5E5E5"> and then we want to do for the show</font>
+
+551
+00:29:46,809 --> 00:29:51,770
+<font color="#E5E5E5">okay so when the show like when they</font>
+
+552
+00:29:50,000 --> 00:29:53,390
+come<font color="#CCCCCC"> when</font><font color="#E5E5E5"> the overlay comes in we don't</font>
+
+553
+00:29:51,770 --> 00:29:55,220
+want them to come<font color="#CCCCCC"> in</font><font color="#E5E5E5"> from the top</font><font color="#CCCCCC"> and</font>
+
+554
+00:29:53,390 --> 00:29:57,860
+<font color="#CCCCCC">bottom we want</font><font color="#E5E5E5"> them</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> come</font><font color="#CCCCCC"> in from the</font>
+
+555
+00:29:55,220 --> 00:30:00,429
+<font color="#CCCCCC">left and</font><font color="#E5E5E5"> right so we need to change the</font>
+
+556
+00:29:57,860 --> 00:30:04,508
+transform and translate<font color="#E5E5E5"> ID</font>
+
+557
+00:30:00,429 --> 00:30:10,119
+properties<font color="#E5E5E5"> so let's go still within here</font>
+
+558
+00:30:04,509 --> 00:30:18,869
+we're gonna say<font color="#E5E5E5"> ampersand</font><font color="#CCCCCC"> oh</font><font color="#E5E5E5"> and then</font>
+
+559
+00:30:10,119 --> 00:30:18,869
+say<font color="#E5E5E5"> transform</font><font color="#CCCCCC"> translate3d</font>
+
+560
+00:30:19,139 --> 00:30:27,758
+and we're gonna say<font color="#E5E5E5"> zero zero zero so</font>
+
+561
+00:30:24,669 --> 00:30:29,230
+<font color="#E5E5E5">that's when when it shows now when it</font>
+
+562
+00:30:27,759 --> 00:30:31,840
+<font color="#CCCCCC">doesn't show we need</font><font color="#E5E5E5"> to change those</font>
+
+563
+00:30:29,230 --> 00:30:34,059
+values<font color="#E5E5E5"> with values as well so let's</font>
+
+564
+00:30:31,840 --> 00:30:38,980
+start with the nav the menu nav so I'm
+
+565
+00:30:34,059 --> 00:30:41,710
+going to go below let's see we<font color="#E5E5E5"> want to</font>
+
+566
+00:30:38,980 --> 00:30:44,139
+go right here just make sure you're
+
+567
+00:30:41,710 --> 00:30:49,149
+still within the media query so still
+
+568
+00:30:44,139 --> 00:30:54,219
+<font color="#E5E5E5">within media MD and let's do dot menu -</font>
+
+569
+00:30:49,149 --> 00:30:58,600
+nav and we're gonna set the height of
+
+570
+00:30:54,220 --> 00:31:01,210
+the menu<font color="#CCCCCC"> navin t5 viewport Heights now</font>
+
+571
+00:30:58,600 --> 00:31:03,639
+if we look<font color="#E5E5E5"> at the final project</font><font color="#CCCCCC"> you can</font>
+
+572
+00:31:01,210 --> 00:31:05,679
+<font color="#E5E5E5">see this is the menu now if it's 75</font>
+
+573
+00:31:03,639 --> 00:31:09,100
+<font color="#E5E5E5">viewport Heights so remember a hundred</font>
+
+574
+00:31:05,679 --> 00:31:13,960
+slices it takes up 75 this will take up
+
+575
+00:31:09,100 --> 00:31:19,029
+25 so let's do height 75 let's do our
+
+576
+00:31:13,960 --> 00:31:21,610
+transform<font color="#E5E5E5"> translate3d</font>
+
+577
+00:31:19,029 --> 00:31:23,559
+now instead<font color="#CCCCCC"> of coming</font><font color="#E5E5E5"> in from the top</font>
+
+578
+00:31:21,610 --> 00:31:25,269
+<font color="#CCCCCC">and bottom</font><font color="#E5E5E5"> where we</font><font color="#CCCCCC"> would use the middle</font>
+
+579
+00:31:23,559 --> 00:31:26,619
+parameter now we're<font color="#CCCCCC"> coming in from</font><font color="#E5E5E5"> the</font>
+
+580
+00:31:25,269 --> 00:31:28,779
+left<font color="#CCCCCC"> and right</font><font color="#E5E5E5"> so we want to use the</font>
+
+581
+00:31:26,619 --> 00:31:35,289
+first<font color="#E5E5E5"> parameter</font><font color="#CCCCCC"> so this is going to be</font>
+
+582
+00:31:28,779 --> 00:31:37,779
+negative<font color="#CCCCCC"> 100%</font><font color="#E5E5E5"> and then zero zero okay</font>
+
+583
+00:31:35,289 --> 00:31:40,330
+<font color="#E5E5E5">that's its resting place and then on the</font>
+
+584
+00:31:37,779 --> 00:31:43,450
+show<font color="#E5E5E5"> it'll come into view but it'll come</font>
+
+585
+00:31:40,330 --> 00:31:47,199
+in from<font color="#CCCCCC"> the side and</font><font color="#E5E5E5"> then finally I just</font>
+
+586
+00:31:43,450 --> 00:31:54,399
+<font color="#E5E5E5">want to change the font</font><font color="#CCCCCC"> size let's</font><font color="#E5E5E5"> say</font>
+
+587
+00:31:47,200 --> 00:31:56,740
+font size to 24 pixels<font color="#CCCCCC"> alright so if</font><font color="#E5E5E5"> we</font>
+
+588
+00:31:54,399 --> 00:31:59,018
+if<font color="#CCCCCC"> we look</font><font color="#E5E5E5"> at it now</font><font color="#CCCCCC"> it's</font><font color="#E5E5E5"> gonna</font><font color="#CCCCCC"> its</font><font color="#E5E5E5"> it's</font>
+
+589
+00:31:56,740 --> 00:32:00,879
+messed up<font color="#CCCCCC"> right because we need to</font>
+
+590
+00:31:59,019 --> 00:32:06,309
+<font color="#CCCCCC">finish but for now that's what it</font><font color="#E5E5E5"> looks</font>
+
+591
+00:32:00,879 --> 00:32:08,408
+<font color="#E5E5E5">like for the branding for</font><font color="#CCCCCC"> the menu</font>
+
+592
+00:32:06,309 --> 00:32:09,879
+<font color="#E5E5E5">branding let's go right below the menu</font>
+
+593
+00:32:08,409 --> 00:32:11,970
+nav and let's do that
+
+594
+00:32:09,879 --> 00:32:15,830
+so menu branding
+
+595
+00:32:11,970 --> 00:32:19,529
+and we want<font color="#E5E5E5"> to set</font><font color="#CCCCCC"> that height</font><font color="#E5E5E5"> to 25</font>
+
+596
+00:32:15,830 --> 00:32:22,889
+viewport<font color="#CCCCCC"> Heights okay so then the nav is</font>
+
+597
+00:32:19,529 --> 00:32:27,899
+75 this the branding is 25 and then we
+
+598
+00:32:22,889 --> 00:32:29,519
+need our transform<font color="#CCCCCC"> translate 3d</font><font color="#E5E5E5"> and this</font>
+
+599
+00:32:27,899 --> 00:32:32,219
+is going to come in<font color="#E5E5E5"> from the</font><font color="#CCCCCC"> other side</font>
+
+600
+00:32:29,519 --> 00:32:34,019
+so<font color="#CCCCCC"> a hundred percent the</font><font color="#E5E5E5"> other one was</font>
+
+601
+00:32:32,220 --> 00:32:36,899
+negative<font color="#E5E5E5"> 100 because we want that to</font>
+
+602
+00:32:34,019 --> 00:32:38,700
+<font color="#E5E5E5">come in from the</font><font color="#CCCCCC"> left this one's coming</font>
+
+603
+00:32:36,899 --> 00:32:43,110
+<font color="#E5E5E5">in from the</font><font color="#CCCCCC"> right so we want a</font><font color="#E5E5E5"> hundred</font>
+
+604
+00:32:38,700 --> 00:32:46,710
+<font color="#E5E5E5">percent okay so if we go ahead and check</font>
+
+605
+00:32:43,110 --> 00:32:49,049
+this out<font color="#CCCCCC"> it looks</font><font color="#E5E5E5"> like that which is</font>
+
+606
+00:32:46,710 --> 00:32:51,990
+we're almost there<font color="#E5E5E5"> but the image is too</font>
+
+607
+00:32:49,049 --> 00:32:54,418
+big<font color="#E5E5E5"> so in your images file you'll notice</font>
+
+608
+00:32:51,990 --> 00:32:57,299
+a portrait<font color="#E5E5E5"> dot jpg and</font><font color="#CCCCCC"> a portrait</font><font color="#E5E5E5"> small</font>
+
+609
+00:32:54,419 --> 00:33:00,450
+dot jpg so we need to change<font color="#E5E5E5"> the</font>
+
+610
+00:32:57,299 --> 00:33:03,210
+portrait to<font color="#E5E5E5"> that smaller image so within</font>
+
+611
+00:33:00,450 --> 00:33:08,399
+menu branding let's add the portrait
+
+612
+00:33:03,210 --> 00:33:14,250
+class so let's say portraits<font color="#E5E5E5"> and set the</font>
+
+613
+00:33:08,399 --> 00:33:21,289
+background<font color="#CCCCCC"> to URL and we want to set</font>
+
+614
+00:33:14,250 --> 00:33:25,769
+<font color="#CCCCCC">that to</font><font color="#E5E5E5"> dot dot / IMG / portrait</font>
+
+615
+00:33:21,289 --> 00:33:31,110
+underscore small dot jpg<font color="#CCCCCC"> and then just</font>
+
+616
+00:33:25,769 --> 00:33:34,350
+set the width to 150 pixels<font color="#CCCCCC"> instead of</font>
+
+617
+00:33:31,110 --> 00:33:38,129
+instead<font color="#CCCCCC"> of 250</font><font color="#E5E5E5"> and then also the height</font>
+
+618
+00:33:34,350 --> 00:33:41,340
+set that to 150 pixels and<font color="#E5E5E5"> save and</font>
+
+619
+00:33:38,129 --> 00:33:43,519
+there we go<font color="#CCCCCC"> all right so now if we</font><font color="#E5E5E5"> make</font>
+
+620
+00:33:41,340 --> 00:33:47,699
+this really small<font color="#CCCCCC"> it still looks good</font>
+
+621
+00:33:43,519 --> 00:33:50,129
+<font color="#E5E5E5">everything</font><font color="#CCCCCC"> still looks good awesome</font><font color="#E5E5E5"> so</font>
+
+622
+00:33:47,700 --> 00:33:52,500
+we now<font color="#E5E5E5"> have the the men used on the</font>
+
+623
+00:33:50,129 --> 00:33:56,219
+<font color="#E5E5E5">overlay the</font><font color="#CCCCCC"> homepage and</font><font color="#E5E5E5"> the</font>
+
+624
+00:33:52,500 --> 00:33:59,370
+responsiveness in our config file we can
+
+625
+00:33:56,220 --> 00:34:01,529
+change colors we<font color="#E5E5E5"> can change the if we</font>
+
+626
+00:33:59,370 --> 00:34:04,739
+want the<font color="#CCCCCC"> image shown stuff like that the</font>
+
+627
+00:34:01,529 --> 00:34:11,099
+opacity<font color="#CCCCCC"> just to test the colors let's</font>
+
+628
+00:34:04,740 --> 00:34:13,319
+say I don't<font color="#E5E5E5"> know let's choose like like</font>
+
+629
+00:34:11,099 --> 00:34:17,879
+a dark green and<font color="#E5E5E5"> then for the</font><font color="#CCCCCC"> secondary</font>
+
+630
+00:34:13,319 --> 00:34:20,819
+<font color="#E5E5E5">we'll choose a below this is going to be</font>
+
+631
+00:34:17,879 --> 00:34:22,969
+really ugly<font color="#E5E5E5"> but let's save and there we</font>
+
+632
+00:34:20,819 --> 00:34:22,969
+go
+
+633
+00:34:24,080 --> 00:34:30,509
+<font color="#E5E5E5">okay</font><font color="#CCCCCC"> now we're gonna</font><font color="#E5E5E5"> create a mix in</font>
+
+634
+00:34:28,310 --> 00:34:32,129
+<font color="#E5E5E5">we'll do this in the next video we're</font>
+
+635
+00:34:30,510 --> 00:34:34,099
+going<font color="#E5E5E5"> to create a mix in that</font><font color="#CCCCCC"> we'll</font><font color="#E5E5E5"> make</font>
+
+636
+00:34:32,129 --> 00:34:36,598
+it<font color="#CCCCCC"> so that</font><font color="#E5E5E5"> when it's on a light</font>
+
+637
+00:34:34,099 --> 00:34:40,859
+background for instance if I make the
+
+638
+00:34:36,599 --> 00:34:42,570
+primary<font color="#E5E5E5"> color white</font><font color="#CCCCCC"> and save you'll see</font>
+
+639
+00:34:40,859 --> 00:34:45,779
+it doesn't<font color="#E5E5E5"> it doesn't</font><font color="#CCCCCC"> look good because</font>
+
+640
+00:34:42,570 --> 00:34:47,429
+<font color="#E5E5E5">the Texas is white so we can't read it</font>
+
+641
+00:34:45,780 --> 00:34:49,409
+<font color="#CCCCCC">so we want to mix</font><font color="#E5E5E5"> and</font><font color="#CCCCCC"> that will</font>
+
+642
+00:34:47,429 --> 00:34:51,899
+<font color="#E5E5E5">determine what the color should</font><font color="#CCCCCC"> be</font><font color="#E5E5E5"> of</font>
+
+643
+00:34:49,409 --> 00:34:54,570
+<font color="#E5E5E5">the font based on the background color</font>
+
+644
+00:34:51,899 --> 00:34:56,159
+<font color="#CCCCCC">so what we will do that</font><font color="#E5E5E5"> will also start</font>
+
+645
+00:34:54,570 --> 00:34:59,700
+on the other pages so<font color="#E5E5E5"> let's just put</font>
+
+646
+00:34:56,159 --> 00:35:01,680
+<font color="#E5E5E5">this back to dark gray and yellow and</font>
+
+647
+00:34:59,700 --> 00:35:03,990
+then let's just make<font color="#E5E5E5"> our commit real</font>
+
+648
+00:35:01,680 --> 00:35:08,279
+quick<font color="#E5E5E5"> again you guys don't</font><font color="#CCCCCC"> have</font><font color="#E5E5E5"> to do</font>
+
+649
+00:35:03,990 --> 00:35:14,939
+this but I'm gonna say<font color="#E5E5E5"> get add all and</font>
+
+650
+00:35:08,280 --> 00:35:17,369
+get commit<font color="#E5E5E5"> actually we</font><font color="#CCCCCC"> just need AB so</font>
+
+651
+00:35:14,940 --> 00:35:20,640
+get commit<font color="#E5E5E5"> and what do we do we we</font>
+
+652
+00:35:17,369 --> 00:35:27,530
+<font color="#CCCCCC">basically made our site responsive so</font>
+
+653
+00:35:20,640 --> 00:35:37,200
+let's just say added media queries<font color="#E5E5E5"> and</font>
+
+654
+00:35:27,530 --> 00:35:41,310
+made<font color="#E5E5E5"> an you overlay responsive whatever</font>
+
+655
+00:35:37,200 --> 00:35:43,589
+it doesn't<font color="#CCCCCC"> really</font><font color="#E5E5E5"> matter alright so in</font>
+
+656
+00:35:41,310 --> 00:35:45,720
+the next video like I said we'll get to
+
+657
+00:35:43,589 --> 00:35:47,880
+the detect changing the text and then
+
+658
+00:35:45,720 --> 00:35:50,240
+<font color="#E5E5E5">we'll start to create our other pages as</font>
+
+659
+00:35:47,880 --> 00:35:50,240
+well
+
