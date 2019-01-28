@@ -1,11 +1,15 @@
 // Widescreens 
 @include mediaXl {
-
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 //Desktops and Laptops
 @include mediaLg {
-
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 // Tablets and Small Laptops
@@ -62,6 +66,10 @@
         grid-template-columns: 1fr;
     }
 
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 // Smartphones 
@@ -75,6 +83,35 @@
             font-size: 4rem;
             line-height: 1; 
         }
+    }
+
+    main#about {
+        padding-left: auto;
+
+        .lg-heading {
+            font-size: 4rem; 
+        }
+        .sm-heading {
+            font-size: 1rem;
+        }
+
+        .about-info {
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .bio {
+                padding: 0.2rem;
+                font-size: 1rem;
+            }
+            
+        }
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
     }
 
 }
