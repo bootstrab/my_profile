@@ -121,7 +121,7 @@
 
         &:hover {
             color: $secondary-color;
-            @include easeOut;
+            @include easeOut; 
         }
     }
 }
